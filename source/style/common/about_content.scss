@@ -1,0 +1,153 @@
+.about__top-desc{
+  text-align: center;
+  padding: 30px 50px;
+}
+
+.about__title{
+  @include font(48px, $title, $gray);
+  margin-bottom: 30px;
+}
+.about__title-desc{
+  @include font(28px, $text, $gray);
+  padding: 5px;
+  font-weight: bold;
+}
+.about__title-desc-p{
+  line-height: 42px;
+}
+
+//----------------------------------------------------------------------------------   about slider
+
+
+.about__bg-slider{
+  //display: none;
+  z-index: -9999;
+  height: 1100px;
+  width: 100%;
+  background-image: url('/assets/img/chapel.jpg');
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.about__bg-slider--limo{
+  background-image: url('/assets/img/limo.jpg');
+}
+.about__bg-slider--lobby{
+  background-image: url('/assets/img/lobby.jpg');
+}
+
+//-------------------------------------------   slider for small devices
+
+
+.about__slider-small_device{
+  display: none;
+}
+.about__slider-small_device--list {
+  margin: 0 auto;
+  width: 95%;
+  min-height: 300px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 15px;
+}
+  .about__slider-small_device--img {
+    width: 100%;
+  }
+
+  .about__slider-small_device--item {
+    opacity: 0;
+    transition: .3s;
+    position: absolute;
+    //top: 0;
+    //right: 0;
+    //bottom: 0;
+  }
+  .active-slide{
+    opacity: 1;
+  }
+
+.about__slider-small_device--dots{
+  margin: 0 auto;
+  width: 100px;
+  @include flex(row, space-between, center);
+}
+.about__slider-small_device--dots_item{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(122, 120, 118, 0.24);
+}
+.active-dot{
+  background: #4990c8;
+}
+
+.about__slider-small_device--btn{
+  margin: 15px auto;
+  cursor: pointer;
+  z-index: 9999;
+  //box-shadow: 0 0 15px 2px rgba(0, 0, 0, .4);
+  //border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  &:hover{
+    opacity: .8;
+  }
+}
+.about__slider-small_device--icon{
+  width: 100%;
+  height: 100%;
+}
+
+.about__slider-team{
+  padding-top: 10px;
+  border-top: 1px solid #ccc;
+  text-align: center;
+  @include font(32px, $title, $gray);
+  margin-bottom: 15px;
+}
+
+//---------------------------------------------------------- employee blocks
+
+
+
+.about__employee{
+  padding: 5px;
+  margin-top: -500px;
+  position: relative;
+  background: #fff;
+  min-height: 500px;
+  @include flex(row, center, center);
+}
+
+
+.about__employee-picwrap{
+  overflow: hidden;
+  width: 300px;
+  height: 300px;
+  float: left;
+  margin: 10px;
+}
+.about__employee-picwrap--right{
+  float: right;
+}
+.about__employee-pic{
+  width: 100%;
+}
+.about__employee-persinfo{
+  width: 60%;
+}
+.about__employee-persinfo--textaline{
+  text-align: right;
+}
+.about__employee-persinfo-name, .about__employee-persinfo-lastname{
+  @include font(32px, $title, $gray);
+}
+.about__employee-persinfo-position {
+  @include font(22px, $title, $gray);
+  padding: 15px 0;
+}
+.about__employee-persinfo-desc{
+  @include font(20px, $text, $gray);
+}

@@ -1,0 +1,41 @@
+@media(max-width: 1500px){
+  .footer-menu__item{
+    padding: 10px 30px;
+  }
+  .footer__btm-wrap{
+    width: 50%;
+  }
+
+}
+
+@media(max-width: 1200px){
+  .menu__link{
+    font-size: 18px;
+  }
+  .footer-menu__item{
+    padding: 10px 10px;
+  }
+
+  .about__employee-persinfo{
+    width: 70%;
+  }
+
+  .under_menu__item{
+    font-size: 22px;
+  }
+  .under_menu__icon-box{
+    width: 45px;
+    height: 45px;
+  }
+  .top_line__content{
+    padding: 10px 150px;
+  }
+
+  .footer__btm-wrap{
+    width: 70%;
+  }
+  .contact__list{
+    width: 65%;
+  }
+
+}

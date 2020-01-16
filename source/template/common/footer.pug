@@ -1,0 +1,33 @@
+.footer
+    a(href="/admin.html").footer__admin-link
+    .footer__wrap
+        .footer__top
+            .footer__menu
+                -
+                    var footerMenuData = [
+                    ['home', 'index.html'],
+                    ['about', 'about.html'],
+                    ['obituaries', 'obits.html'],
+                    ['services', 'services.html'],
+                    ['pre-planning', 'pre-planning.html'],
+                    ['feedbacks', 'feedbacks.html'],
+                    ['contacts', 'contacts.html'],
+                    ['monuments', '#']
+                    ]
+
+                each item in footerMenuData
+                        li.footer-menu__item
+                            a(href=`${item[1]}`).footer-menu__link #{item[0]}
+            .footer__refer
+                .footer__refer-wrap
+                    a.footer__refer-link(target="_blank" href="https://lucysflower.com")
+                        img.footer__refer-icon(src="/assets/img/icons/icon-flower.png" alt="icon flower")
+                        .footer__refer-text order flowers
+                .footer__refer-wrap
+                    a.footer__refer-link(target="_blank" href="https://samarkanddenver.com")
+                        img.footer__refer-icon(src="/assets/img/icons/dinner.png" alt="icon dinner")
+                        .footer__refer-text memorial dinner
+        .footer_btm
+            .footer__btm-company-name &#169; Piece of Heaven funeral and cremation services, LLC
+            .footer__copyrights   Created by Anatolii Tupkalo for "Piece of Heave"
+

@@ -1,0 +1,80 @@
+.feedbacks__content-title{
+  @include font(48px, $title, $gray);
+  padding: 40px 0;
+  text-align: center;
+}
+.feedback__content-box{
+  overflow: scroll;
+  width: 95%;
+  height: 600px;
+  margin: 0 auto;
+  border: 1px solid $blue;
+}
+
+.feedbacks__form-title{
+  @include font(32px, $title, $gray);
+  padding: 30px 0;
+  text-align: center;
+}
+.feedbacks__content-item{
+  padding: 15px 10px;
+}
+.feedbacks__item-name, .feedbacks__item-date {
+  @include font(20px, $text, $gray);
+  padding-bottom: 20px;
+  font-weight: bold;
+}
+.feedbacks__item-text{
+  @include font(20px, $text, $gray);
+}
+
+.feedbacks__form-alert{
+  @include font(22px, $text, $gray);
+  margin: 0 auto;
+  min-height: 400px;
+  text-align: center;
+}
+.box__error{
+  color: red;
+  text-align: center;
+  min-height: 45px;
+  font-size: 16px;
+}
+.feedbacks__form{
+  text-align: center;
+  @include flex(column, center, center);
+}
+
+.feedback-form__input{
+  margin: 10px 0;
+  width: 300px;
+  height: 40px;
+  border: 1px solid $gray;
+  &:hover{
+    border: 1px solid $blue;
+  }
+}
+
+.feedback-form__message{
+  margin-top: 10px;
+  width: 300px;
+  height: 150px;
+  border: 1px solid $gray;
+  &:hover{
+    border: 1px solid $blue;
+  }
+  }
+.feedback-from__button{
+  box-shadow: 0 0 8px 2px rgba(0, 0, 0, .2);
+  padding: 5px 0;
+  @include font(24px, $text, $blue);
+  transition: .3s;
+  background: #fff;
+  margin: 20px 0  50px 0;
+  width: 300px;
+  border: 1px solid $blue;
+  &:hover{
+    color: #fff;
+    background: $blue;
+  }
+}

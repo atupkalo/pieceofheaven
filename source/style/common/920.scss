@@ -1,0 +1,90 @@
+@media(max-width: 920px){
+  .header{
+    height: 600px;
+  }
+
+  .top_line__phone-icon{
+    width: 40px;
+    height: 40px;
+  }
+  .top_line__phone-text{
+    font-size: 26px;
+  }
+  .top_line__lang{
+    font-size: 20px;
+  }
+  .top_line__content{
+    padding: 10px 80px;
+  }
+  .header__desc{
+    font-size: 22px;
+  }
+
+  .contact__list{
+    width: 80%;
+  }
+  .menu{
+    display: none;
+  }
+  .popup_menu__burger{
+    display: block;
+  }
+  .under_menu__icon-box{
+    width: 35px;
+    height: 35px;
+  }
+  .under_menu__title{
+    margin-left: 10px;
+    font-size: 18px;
+  }
+  .main_header__title-maindesc{
+    font-size: 36px;
+  }
+  .footer-menu__item{
+    padding: 5px;
+  }
+  .footer-menu__link{
+    font-size: 16px;
+  }
+  footer__refer-icon{
+    width: 35px;
+    height: 35px;
+  }
+  .footer__refer{
+    width: 70%;
+  }
+  .footer__btm-wrap{
+    width: 90%;
+  }
+  .footer__copyrights{
+    font-size: 16px;
+  }
+  .main_header__container {
+    min-height: 760px;
+  }
+  .main_header__title-secdesc{
+    margin-bottom:50px;
+  }
+  //----------------------------------------------------obits
+  .obits__info-title{
+    font-size: 28px;
+  }
+  .obits__info-name, .obits__info-year{
+    font-size: 24px;
+  }
+  .obits__info-btm-wrap{
+    width: 100%;
+  }
+
+  //  -------------------------------------------------------   about
+
+  .about__bg-slider, .about__bg-slider--limo, .about__bg-slider--lobby{
+    display: none;
+  }
+  .about__slider-small_device{
+    display: block;
+  }
+  .about__employee{
+    margin-top: 0;
+  }
+}

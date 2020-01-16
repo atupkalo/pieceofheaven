@@ -1,0 +1,20 @@
+.popup_container
+    ul.popup_menu
+        .popup_menu__cross
+            img.popup_menu__cross-icon(src="assets/img/icons/cros.png" alt="close icon")
+        -
+            var popupData = [
+            ['home', 'index.html'],
+            ['about', 'about.html'],
+            ['obituaries', 'obits.html'],
+            ['services', 'services.html'],
+            ['pre-planning', 'pre-planning.html'],
+            ['feedbacks', 'feedbacks.html'],
+            ['contacts', 'contacts.html'],
+            ['monuments', '#']
+            ]
+
+        each item in popupData
+            li.popup_menu__item
+                a(href=`${item[1]}`).popup-menu__link #{item[0]}
+

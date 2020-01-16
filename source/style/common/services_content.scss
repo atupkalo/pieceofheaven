@@ -1,0 +1,137 @@
+.services__title{
+  @include font(48px, $title, $gray);
+  padding: 40px 0;
+  text-align: center;
+}
+.services__main-desc{
+  margin-bottom: 40px;
+}
+.services__main-section-text{
+  @include font(20px, $text, $gray);
+  padding: 5px 15px;
+}
+.services__first-list, .services__second-list{
+  border: 1px solid $blue;
+  padding: 10px 20px;
+  width: 250px;
+  margin: 10px 0 30px 60%;
+}
+.services__second-list{
+  margin: 10px 0 30px 5%;
+  width: 350px;
+}
+.services__list-item{
+  padding: 5px 0;
+  @include font(24px, $title, $blue);
+}
+
+
+.services__item-title-wrap{
+  cursor: pointer;
+  @include flex(row, start, center);
+  padding: 10px 20px;
+  margin-bottom: 5px;
+&:hover{
+      opacity: .7;
+  }
+}
+.services__item-title{
+  @include font(32px, $title, $gray);
+}
+.title__active{
+  @include font(32px, $title, $blue);
+}
+.services__item-title-arrow{
+  margin-left: 40px;
+  background-image: url("/assets/img/icons/arrow_down.png");
+  background-size: cover;
+  width: 40px;
+  height: 30px;
+}
+.arrow__active{
+  background-image: url("/assets/img/icons/arrow_up-g.png");
+}
+
+.cremation__content{
+  padding: 10px 15px;
+  @include font(20px, $text, $gray);
+}
+
+.gen-price__desc{
+  text-align: center;
+  padding: 10px 0;
+  @include font(18px, $text, $gray);
+  font-weight: bold;
+}
+.price-list{
+  padding: 20px;
+  @include flex(row, flex-start, flex-start);
+}
+
+
+//-----------------------------------------------------------------------   price-list-small
+.price-list--s{
+  display: none;
+  padding: 5px;
+}
+.price-list__price-wrap{
+  @include flex(row, flex-start, center);
+}
+.price-list__price--s{
+  padding-left: 15px;
+  font-weight: bold;
+}
+.price-list__desc--s{
+  font-size: 9px;
+  text-align: center;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+//----------------------------------------------------------------------------------------------------------------------
+
+
+
+
+.price-list__names, .price-list__price, .price-list__desc{
+  padding: 20px 0;
+  @include font(20px, $text, $gray);
+}
+.price-list__price{
+  @include font(20px, $title, $gray);
+  padding-left: 60px;
+  padding-right: 40px;
+}
+
+.price-list__names{
+  text-decoration: underline;
+}
+.gen-price_-worrning{
+  text-align: center;
+  @include font(18px, $text, #AE1008);
+  font-weight: bold;
+}
+.ss__picter-wrap{
+  width: 200px;
+  height: 200px;
+  float: left;
+  margin: 20px;
+}
+.ss__pic{
+  width: 100%;
+  height: 100%;
+}
+
+.ss__text{
+  @include font(20px, $text, $gray);
+  padding: 30px;
+}
+.ss__text-inner-list-wrap{
+  padding: 50px;
+  width: 70%;
+  border: 1px dotted $gray;
+  margin: 0 auto;
+}
+.ss__inner-list-item{
+  @include font(20px, $text, $gray);
+  padding: 10px 0;
+}

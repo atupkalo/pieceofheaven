@@ -1,0 +1,19 @@
+.under_menu__list{
+  padding: 10px 50px;
+  @include flex(row, space-between, center);
+}
+.under_menu__item{
+  @include flex(row, flex-start, center);
+  @include font(32px, $text, $gray);
+}
+.under_menu__icon-box{
+  width: 60px;
+  height: 60px;
+}
+.under_menu__icon{
+  width: 100%;
+  height: 100%;
+}
+.under_menu__title{
+  margin-left: 20px;
+}

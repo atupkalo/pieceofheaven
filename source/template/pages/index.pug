@@ -1,0 +1,17 @@
+extends ../_template
+
+block variables
+  - var title = 'Home page'
+
+block content
+  .popup_menu__burger
+      img.popup_menu__burger-icon(src="assets/img/icons/burger_w.png" alt="menu icon")
+      //.popup_menu__page-marker
+  include ../common/pop-up_menu
+  include ../common/main_header
+  .main-container
+    include ../common/menu
+    include ../common/under_menu
+    include ../common/home_content
+  include ../common/footer
+

@@ -1,0 +1,30 @@
+.menu__list{
+  @include flex(row, center, center);
+}
+
+.menu-item{
+  position: relative;
+  text-align: center;
+  background: $blue;
+  width: 13%;
+  border-right: 1px solid #fff;
+  transition-duration: .3s;
+  border-top: 2px solid transparent;
+  &:hover{
+    background: $lightBlue;
+  }
+
+}
+.menu__link{
+  display: block;
+  padding: 10px 0;
+  @include font(22px, $text, #fff);
+  transition-duration: .3s;
+  &:hover{
+    color: $gray;
+  }
+}
+.menu__active{
+  border-top: solid 2px #FFB91F;
+  background-image: linear-gradient(#4c92ca, #1d6aa6);
+}

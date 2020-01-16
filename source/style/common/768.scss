@@ -1,0 +1,214 @@
+@media(max-width: 768px){
+  p{
+    line-height: 24px;
+  }
+  .top_line__content{
+    padding: 5px 10px;
+  }
+  .top_line__phone-text{
+    font-size: 22px;
+  }
+  .top_line__phone-icon{
+    width: 35px;
+    height: 35px;
+  }
+  .top_line__lang{
+    font-size: 18px;
+  }
+  .main_header__title-slogan{
+    font-size: 18px;
+  }
+
+  //---------------------------------------------  under  menu
+  .under_menu__icon-box{
+    width: 30px;
+    height: 30px;
+  }
+  .under_menu__title{
+    margin-left: 5px;
+    font-size: 16px;
+  }
+  .under_menu__list{
+    padding: 5px 10px;
+    margin: 2px;
+  }
+
+  //----------------------------------------------- home obits
+
+  .home_obits__item-innerwrap{
+    width: 250px;
+  }
+  .obit__img-wrap{
+    height: 280px;
+  }
+
+//  -----------------------------------------------------  about
+  .about__top-desc{
+    padding: 20px 15px;
+  }
+  .about__title-desc-p{
+    line-height: 32px;
+  }
+  .about__employee-picwrap{
+    margin-bottom: 20px;
+  }
+  .about__employee{
+    min-height: 600px;
+  }
+
+  .about__pic-wrap--limo{
+    background-image: url('/assets/img/limo-s.jpg');
+  }
+  .about__pic-wrap--lobby{
+    background-image: url('/assets/img/lobby-s.jpg');
+  }
+  .about__pic-wrap--chapel{
+    background-image: url('/assets/img/chapel-s.jpg');
+  }
+  .about__employee-persinfo{
+    width: 90%;
+  }
+
+    //  ----------------------------------------------------- obits
+  .search_input{
+    margin-right: 0;
+  }
+  .obits__info-btm-wrap{
+    width: 70%;
+    @include flex(column, center, space-between);
+  }
+  .obits__info-date{
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+  .obits__info-cemetery{
+    margin-left: 0;
+  }
+  .searching-form{
+    @include flex(column, center, center);
+  }
+  .search_input{
+      margin-bottom: 10px;
+  }
+  .search__btn{
+    margin: 0;
+  }
+  .obits__info-wrap{
+    display: block;
+  }
+  .obits__info-btm-wrap{
+    text-align: center;
+  }
+  .obits__item{
+    width: 96%;
+  }
+  .obits__info{
+    margin: 0 auto;
+  }
+  .obits__info-btm{
+    @include flex(row, space-between, center);
+    width: 100%;
+  }
+  .obits__info-date{
+    margin: 0;
+  }
+  .obits__item-text{
+    text-align: center;
+    font-size: 16px;
+  }
+//  -------------------------------------------------------------   services
+  .services__list-item{
+    font-size: 18px;
+  }
+  .services__main-desc{
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  .services__first-list, .services__second-list{
+    margin: 10px auto;
+    padding: 5px;
+    font-size: 16px;
+  }
+  .services__second-list{
+    width: 300px;
+  }
+  .services__main-section-text{
+    font-size: 16px;
+  }
+  .cremation__content{
+    padding: 5px;
+    font-size: 16px;
+    text-align: center;
+  }
+  .gen-price__desc{
+    font-size: 16px;
+  }
+  .price-list{
+   display: none;
+  }
+  .price-list--s{
+    display: block;
+  }
+  .gen-price_-worrning{
+    font-size: 16px;
+  }
+
+
+
+  .ss__picter-wrap{
+    float: none;
+    margin: 0 auto;
+    width: 150px;
+    height: 150px;
+  }
+  .ss__text{
+    font-size: 16px;
+    padding: 10px;
+  }
+  .ss__text-inner-list-wrap{
+    width: 96%;
+    padding: 5px;
+    margin: 0 auto;
+  }
+  .ss__inner-list-item{
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 0;
+  }
+
+
+
+  .preplan__content{
+    font-size: 16px;
+  }
+  .preplan__title{
+    font-size: 36px;
+  }
+
+  .feedbacks__content-title{
+    font-size: 36px;
+  }
+  .feedbacks__form-title{
+    font-size: 24px;
+  }
+  .feedback-form__input, .feedback-form__message, .feedback-from__button{
+    width: 280px;
+  }
+
+//  ------------------------------------------------  contacts
+  .contacts__title{
+    font-size: 36px;
+  }
+  .contact__list{
+    width: 99%;
+    box-shadow: none;
+  }
+  .contact__list-item{
+    font-size: 18px;
+  }
+  .map__over-line{
+    padding: 7px 0;
+    font-size: 16px;
+  }
+}

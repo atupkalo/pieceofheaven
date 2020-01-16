@@ -1,0 +1,27 @@
+.header{
+  height: 800px;
+}
+.header__bg{
+  position: absolute;
+  z-index: -9;
+  width: 100%;
+}
+.header__bg-pic{
+  width: 100%;
+}
+
+.header__title{
+  padding: 15px;
+  background: rgba(#000, .5);
+  @include flex(column, center, center);
+}
+.header__title-pic--wrap{
+  margin-bottom: 20px;
+}
+.header__title-pic{
+  width: 100%;
+}
+
+.header__desc{
+  @include font(28px, $text, #fff);
+}

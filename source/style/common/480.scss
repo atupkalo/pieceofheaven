@@ -1,0 +1,115 @@
+@media(max-width: 768px){
+  .main_header__container{
+    min-height: 580px;
+  }
+  .top_line__phone-text{
+    font-size: 18px;
+  }
+  .top_line__lang{
+    font-size:14px;
+  }
+  .popup_menu__burger{
+    top: 75px;
+  }
+  .main_header__title-maindesc{
+    font-size: 24px;
+    margin-bottom: 5px;
+  }
+  .header__desc{
+    font-size:18px;
+  }
+  .main_header__title-secdesc{
+    font-size: 16px;
+  }
+  .under_menu__item{
+    @include flex(column, flex-start, center);
+    font-size: 14px;
+  }
+  .under_menu__title{
+    text-align: center;
+  }
+  .obits__title{
+    font-size: 36px;
+    padding: 25px 0 32px;
+  }
+
+//  --------------------------------------------------------------    footer
+
+  .footer__menu{
+    @include flex(row, center, center);
+  flex-wrap: wrap;
+  }
+  .footer-menu__link{
+    font-size: 14px;
+  }
+  .footer__refer{
+    width: 90%;
+  }
+  .footer__refer-icon{
+    width: 30px;
+    height: 30px;
+  }
+  .footer__refer-link{
+    font-size: 14px;
+  }
+  .footer__btm-company-name{
+    font-size: 14px;
+    text-align: center;
+  }
+  .footer__copyrights{
+    font-size:9px;
+  }
+//  -------------------------------------------------------------------  about
+  .about__title{
+    font-size: 36px;
+  }
+  .about__top-desc{
+    padding: 20px 5px;
+  }
+  .about__title-desc{
+    font-size: 18px;
+  }
+  .about__employee-picwrap{
+    float: none;
+    margin: 0 auto;
+  }
+  .about__employee-persinfo-name, .about__employee-persinfo-lastname{
+    font-size: 22px;
+  }
+  .about__employee-persinfo-desc{
+    font-size: 16px;
+  }
+  .about__employee-persinfo-name, .about__employee-persinfo-lastname, .about__employee-persinfo-position, .about__employee-persinfo-desc{
+    text-align: center;
+  }
+  .about__pic-wrap--limo{
+    background-image: url('/assets/img/limo-xs.jpg');
+  }
+  .about__pic-wrap--lobby{
+    background-image: url('/assets/img/lobby-xs.jpg');
+  }
+  .about__pic-wrap--chapel{
+    background-image: url('/assets/img/chapel-xs.jpg');
+  }
+  .about__employee-persinfo{
+    width: 98%;
+  }
+//------------------------------------------------------------------------  services
+  .services__title{
+    font-size:36px;
+    padding: 20px 0;
+  }
+  .services__item-title{
+    font-size: 22px;
+  }
+  .services__item-title-arrow{
+    width: 25px;
+    height: 20px;
+    margin-left: 5px;
+  }
+  .services__item-title-wrap{
+    padding: 4px 5px;
+  }
+}
+
+

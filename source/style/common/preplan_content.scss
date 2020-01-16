@@ -1,0 +1,9 @@
+.preplan__title{
+  @include font(42px, $title, $gray);
+  text-align: center;
+  padding-top: 30px;
+}
+.preplan__content{
+  @include font(20px, $text, $gray);
+  padding: 20px;
+}

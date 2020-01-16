@@ -1,0 +1,105 @@
+.home__main-desc{
+  min-height: 400px;
+  background-image: url("/assets/img/bg.png");
+  background-size: cover;
+}
+.home__main-title, .home__second-title{
+  text-align: center;
+  @include font(32px, $title, $gray);
+}
+.obits__title{
+  @include font(48px, $title, $gray);
+  padding: 55px 0 65px 0;
+  text-align: center;
+}
+
+
+.home-obits__list-wrap{
+  @include flex(row, center, center);
+  margin-bottom: 50px;
+}
+.home-page__obits-arrow-left, .home-page__obits-arrow-right{
+  cursor: pointer;
+  width: 70px;
+  height: 50px;
+  margin: 15px;
+  opacity: .5;
+  &:hover{
+    opacity: .7;
+  }
+}
+.obits__arrow-icon{
+  width: 100%;
+  height: 100%;
+}
+.home_obits__list{
+  position: relative;
+  overflow: hidden;
+  max-height: 600px;
+  @include flex(row, center, center);
+}
+.obits__list-bg, .obits__list-bg-left{
+  position: absolute;
+  width: 10%;
+  height: 100%;
+}
+.obits__list-bg{
+  right: 0;
+}
+.obits__list-bg-left{
+  left: 0;
+}
+
+.obits_test_right{
+  margin-right: -30%;
+}
+.home_obits__item{
+  box-sizing: border-box;
+  padding: 15px;
+}
+.home_obits__item-innerwrap{
+  background: #fff;
+  box-shadow: 2px 2px 10px 4px rgba(0, 0, 0, .4);
+  padding: 5px;
+  width:350px;
+}
+.obit__img-wrap{
+  background-image: url("/assets/img/obit_bg.jpg");
+  background-size: cover;
+  overflow: hidden;
+  margin-bottom: 10px;
+  width: 100%;
+  height: 400px;
+}
+.obit__img{
+  width: 100%;
+}
+
+.obit__firstname, .obit__lastname{
+  padding: 0 15px;
+  @include font (24px, $title, $gray);
+  font-weight: bold;
+}
+
+.obit_date{
+  @include font (20px, $title, $gray);
+  padding: 15px 0 0 15px;
+}
+.obit_link-wrap{
+  text-align: right;
+  padding-bottom: 15px;
+  padding-right: 15px;
+}
+.obit__link{
+  font-size: 18px;
+  padding: 7px 20px;
+  border: 2px solid $blue;
+  color: $blue;
+  margin-bottom: 20px;
+  transition-duration: .3s;
+  &:hover{
+    color: #fff;
+    background: $blue;
+  }
+}
+

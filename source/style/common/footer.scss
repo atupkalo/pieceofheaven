@@ -1,0 +1,79 @@
+.footer{
+  position: relative;
+}
+.footer__wrap{
+  background: $blue;
+}
+.footer__top{
+  border-bottom: 1px solid #fff;
+}
+.footer__menu{
+  @include flex(row, center, center);
+  background: $gray;
+}
+.footer-menu__item{
+  padding: 10px 50px;
+}
+.footer-menu__link{
+  @include font(18px, $text, #fff);
+  opacity: .8;
+  &:hover{
+  opacity: 10;
+    color: #fff;
+}
+}
+
+
+
+.footer__refer{
+  @include flex(row, space-between, center);
+  width: 40%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+.footer__refer-link{
+  @include font(18px, $text, #fff);
+}
+.footer__refer-wrap{
+}
+.footer__refer-link{
+  @include flex(column, center, center);
+  opacity: .8;
+  &:hover{
+    opacity: 10;
+    color: #fff;
+  }
+}
+
+.footer__refer-icon{
+  width: 50px;
+  height: 50px;
+}
+
+//------------------------------------------------------------- footer bottom
+
+
+
+.footer_btm{
+  @include flex(column, center, center);
+}
+.footer__btm-company-name{
+  @include font(18px, $text, #fff);
+  padding: 5px 0;
+}
+.footer__copyrights{
+  @include font(12px, $text, #fff);
+  padding-bottom: 10px;
+}
+
+.footer__admin-link{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+}
+
+.footer__admin-link{
+  border: 1px solid #fff;
+}

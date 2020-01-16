@@ -1,0 +1,63 @@
+.popup_container{
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: -200px;
+  width: 200px;
+  height: 100%;
+  transition: .5s;
+  background: rgba($blue, .9);
+  @include flex(row, center, center)
+}
+.popup_menu{
+  padding: 10px 0 0 20px;
+  @include flex(column, flex-start, flex-start);
+}
+.popup_menu__item{
+  padding: 15px 10px;
+}
+
+.popup-menu__link{
+  padding: 15px 10px;
+  @include font(22px, $text, #fff);
+  &:hover{
+    color: #fff;
+    opacity: .8;
+  }
+}
+.popup_menu__cross{
+  opacity: .8;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 20px;
+  height: 20px;
+  &:hover{
+    opacity: 10;
+  }
+}
+
+
+//------------------------------------------------------burger
+.popup_menu__burger{
+  box-sizing: border-box;
+  display: none;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  top: 100px;
+  left: 50px;
+  padding: 5px;
+}
+
+.popup_menu__cross-icon, .popup_menu__burger-icon{
+  width: 100%;
+  height: 100%;
+}
+.popup_menu__burger-icon{
+
+}

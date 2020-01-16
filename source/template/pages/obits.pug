@@ -1,0 +1,15 @@
+extends ../_template
+
+block variables
+    - var title = 'obits'
+block content
+    .popup_menu__burger
+        img.popup_menu__burger-icon(src="assets/img/icons/burger_w.png" alt="menu icon")
+    include ../common/pop-up_menu
+    include ../common/header
+    .main-container
+        include ../common/menu
+        include ../common/under_menu
+        include ../common/obits_content
+    include ../common/footer
+

@@ -1,0 +1,99 @@
+.contacts__title{
+  @include font(42px, $title, $gray);
+  text-align: center;
+  padding-top: 30px;
+}
+.contact__list{
+  display: block;
+  box-shadow: 0 0 23px 12px rgba(0, 0, 0, .2);
+  margin: 30px auto;
+  padding: 40px 0;
+  width: 50%;
+  text-align: center;
+}
+.contact__list-item {
+  @include font(28px, $text, $blue);
+  padding: 10px 0;
+  font-weight: bold;
+}
+
+.map__display{
+  width: 100%;
+  height: 800px;
+  background: #92ece7;
+}
+
+.map__over-line{
+  text-align: center;
+  @include font(22px, $text, #fff);
+  padding: 15px 0;
+  background: rgba(#000, .5);
+  z-index: 9999;
+}
+
+
+
+
+.form__wrap{
+  background-image: url("/assets/img/bg.png");
+  background-size: cover;
+}
+.contct-form__title{
+  text-align: center;
+  @include font(32px, $title, $gray);
+  padding-top: 50px;
+}
+
+
+
+.contact__form-alert{
+  text-align: center;
+  margin: 0 auto;
+  width: 40%;
+  min-height: 500px;
+  @include font(18px, $text, $gray);
+}
+.contact-box__error{
+  width: 300px;
+  height: 40px;
+  color: red;
+  text-align: center;
+  font-size: 16px;
+}
+.contact-form{
+  margin: 0 auto;
+  width: 40%;
+  @include flex(column, center, center);
+}
+.contact-form__input{
+  margin: 10px 0;
+  width: 300px;
+  height: 40px;
+  border: 1px solid $gray;
+  &:hover{
+    border: 1px solid $blue;
+  }
+}
+.contact-form__message{
+  margin-top: 10px;
+  width: 300px;
+  height: 150px;
+  border: 1px solid $gray;
+  &:hover{
+    border: 1px solid $blue;
+  }
+}
+.contact-from__button{
+  box-shadow: 0 0 8px 2px rgba(0, 0, 0, .2);
+  padding: 5px 0;
+  @include font(24px, $text, $blue);
+  transition: .3s;
+  background: #fff;
+  margin: 20px 0  50px 0;
+  width: 300px;
+  border: 1px solid $blue;
+  &:hover{
+    color: #fff;
+    background: $blue;
+  }
+}
