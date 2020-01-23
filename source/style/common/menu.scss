@@ -3,17 +3,28 @@
 }
 
 .menu-item{
+  overflow: hidden;
   position: relative;
   text-align: center;
   background: $blue;
   width: 13%;
   border-right: 1px solid #fff;
   transition-duration: .3s;
-  border-top: 2px solid transparent;
   &:hover{
     background: $lightBlue;
   }
+  
+}
 
+.pseudo_element{
+  position: absolute;
+  top: -9px;
+  left: -9px;
+  margin-left: 50%;
+  width: 18px;
+  height: 18px;
+  background: #FFB91F;
+  transform: rotate(45deg);
 }
 .menu__link{
   display: block;
@@ -23,8 +34,4 @@
   &:hover{
     color: $gray;
   }
-}
-.menu__active{
-  border-top: solid 2px #FFB91F;
-  background-image: linear-gradient(#4c92ca, #1d6aa6);
 }

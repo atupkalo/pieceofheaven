@@ -26,22 +26,42 @@
 }
 
 
+
+
+
+
+//----------------------------------------------------   accordion
+.services-content__list-item{
+  position: relative;
+}
+.services__content-wrap{
+  overflow: hidden;
+  max-height: 0;
+  transition-duration: .3s;
+}
+.content__active{
+  max-height: 100%;
+}
 .services__item-title-wrap{
   cursor: pointer;
   @include flex(row, start, center);
   padding: 10px 20px;
   margin-bottom: 5px;
+  transition: .3s;
 &:hover{
       opacity: .7;
   }
 }
 .services__item-title{
+  transition: .3s;
   @include font(32px, $title, $gray);
 }
 .title__active{
   @include font(32px, $title, $blue);
 }
+
 .services__item-title-arrow{
+  transition: .3s;
   margin-left: 40px;
   background-image: url("/assets/img/icons/arrow_down.png");
   background-size: cover;
@@ -49,9 +69,8 @@
   height: 30px;
 }
 .arrow__active{
-  background-image: url("/assets/img/icons/arrow_up-g.png");
+  background-image: url("/assets/img/icons/arrow_up-b.png");
 }
-
 .cremation__content{
   padding: 10px 15px;
   @include font(20px, $text, $gray);
