@@ -4,7 +4,7 @@ const menuPointer = function(menuEl){
     pseudoEl.classList.add('pseudo_element');
     for(let i = 0; i < menuItems.length; i++ ){
         menuEl.appendChild(pseudoEl);
-    }
+    };
 };
 const menuLinks = document.querySelectorAll('.menu__link');
 const menuItems = document.querySelectorAll('.menu-item');
@@ -14,20 +14,22 @@ const menuItems = document.querySelectorAll('.menu-item');
            };
        };
 
-
+const doSlideMenu = function(){
     const popUpMenu = document.querySelector('.popup_container'),
-          popupBurger = document.querySelector('.popup_menu__burger'),
-          popupCross = document.querySelector('.popup_menu__cross');
+        popupBurger = document.querySelector('.popup_menu__burger'),
+        popupCross = document.querySelector('.popup_menu__cross');
     const doSlide = function(target, amount){
         target.style.left = amount + 'px';
     };
-   popupBurger.addEventListener('click', function(){
-         doSlide(popUpMenu, 0);
-       console.log();
-   });
-   popupCross.addEventListener('click', function(){
+    popupBurger.addEventListener('click', function(){
+        doSlide(popUpMenu, 0);
+        console.log();
+    });
+    popupCross.addEventListener('click', function(){
         doSlide(popUpMenu, -200);
-   });
+    });
+};
+
 
 // ----------------------------------------------------   home page
 if(location.pathname == '/index.html'){
@@ -49,6 +51,7 @@ if(location.pathname == '/about.html'){
     });
     sliderResize();
     smallSlider();
+    doSlideMenu();
 };
 
 
@@ -57,6 +60,8 @@ if(location.pathname == '/contacts.html'){
     window.addEventListener('scroll', function(){
         headerScroll(headerBg, -30, window.scrollY);
         headerScroll(headerTitle,10, window.scrollY);
+        doContact();
+        doSlideMenu();
     });
 };
 
@@ -67,6 +72,7 @@ if(location.pathname == '/obits.html'){
         headerScroll(headerBg, -30, window.scrollY);
         headerScroll(headerTitle,10, window.scrollY);
     });
+    doSlideMenu();
 };
 
 
@@ -77,6 +83,7 @@ if(location.pathname == '/services.html'){
         headerScroll(headerTitle,10, window.scrollY);
     });
     scrollDown();
+    doSlideMenu();
 };
 
 
@@ -86,11 +93,14 @@ if(location.pathname == '/feedbacks.html'){
         headerScroll(headerBg, -30, window.scrollY);
         headerScroll(headerTitle,10, window.scrollY);
     });
+    doFeedback();
+    doSlideMenu();
 
 };
 
 
 //-----------------------------------------------------   admin
 if(location.pathname == '/admin.html'){
-    adminForm();
+    adminFormLogin();
+    adminFormData();
 };

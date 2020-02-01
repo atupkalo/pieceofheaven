@@ -65,6 +65,7 @@
   }
   }
 .feedback-from__button{
+  cursor: pointer;
   box-shadow: 0 0 8px 2px rgba(0, 0, 0, .2);
   padding: 5px 0;
   @include font(24px, $text, $blue);

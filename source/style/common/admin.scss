@@ -39,6 +39,7 @@
   margin-bottom: 30px;
 }
 .admin__button{
+  cursor: pointer;
   padding: 10px 30px;
   background: $blue;
   color: #fff;
@@ -46,11 +47,6 @@
     opacity: .8;
   }
 }
-
-
-
-
-
 .admin__result{
   text-align: center;
   font-size: 18px;

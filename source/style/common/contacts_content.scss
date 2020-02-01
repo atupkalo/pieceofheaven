@@ -38,10 +38,11 @@
   background-image: url("/assets/img/bg.png");
   background-size: cover;
 }
-.contct-form__title{
+.contact-form__title{
   text-align: center;
   @include font(32px, $title, $gray);
   padding-top: 50px;
+  margin-bottom: 20px;
 }
 
 
