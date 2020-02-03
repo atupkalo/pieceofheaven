@@ -34,12 +34,19 @@
   }
 
   //----------------------------------------------- home obits
+  .direction__arrow-wrap{
+    padding: 0;
+  }
 
   .home_obits__item-innerwrap{
     width: 250px;
   }
   .obit__img-wrap{
     height: 280px;
+  }
+  .home-obits__list-wrap{
+    margin-bottom: 100px;
+    min-height: 540px;
   }
 
 //  -----------------------------------------------------  about
@@ -210,5 +217,18 @@
   .map__over-line{
     padding: 7px 0;
     font-size: 16px;
+  }
+//  -------------------------------------------------  admin
+  .obits__data-form{
+    width: 200px;
+  }
+  .admin-obits__input{
+    width: 200px;
+  }
+  .admin-obits__input--file {
+    width: 130px;
+  }
+  .admin__footer{
+    height: 120px;
   }
 }

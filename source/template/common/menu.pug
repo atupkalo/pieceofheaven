@@ -3,17 +3,17 @@ section.menu
     ul.menu__list
         -
             var menuData = [
-            ['home', 'index.html', '/index.html'],
-            ['about', 'about.html', '/about.html'],
-            ['obituaries', 'obits.html', '/obits.html'],
-            ['services', 'services.html', '/services.html'],
-            ['pre-planning', 'pre-planning.html', '/pre-planning.html'],
-            ['feedbacks', 'feedbacks.html', '/feedbacks.html'],
-            ['contacts', 'contacts.html', '/contacts.html'],
-            ['monuments', 'http://pieceofheavenmonuments.com', ' ']
+                ['home', 'index.html', '/index.html'],
+                ['about', 'about.html', '/about.html'],
+                ['obituaries', 'obits.html', '/obits.html'],
+                ['services', 'services.html', '/services.html'],
+                ['pre-planning', 'pre-planning.html', '/pre-planning.html'],
+                ['feedbacks', 'feedbacks.html', '/feedbacks.html'],
+                ['contacts', 'contacts.html', '/contacts.html'],
+                ['monuments', 'http://pieceofheavenmonuments.com', ' ']
             ]
 
         each item in menuData
-            li.menu-item
+            li.menu-item.menu
                 a(href=`${item[1]}` data-pagename=`${item[2]}`).menu__link #{item[0]}
 

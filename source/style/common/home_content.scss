@@ -1,3 +1,6 @@
+.home_obits{
+  position: relative;
+}
 .home__main-desc{
   min-height: 400px;
   background-image: url("/assets/img/bg.png");
@@ -9,10 +12,23 @@
 }
 .obits__title{
   @include font(48px, $title, $gray);
-  padding: 55px 0 65px 0;
+  padding-top: 55px;
   text-align: center;
 }
-
+.direction__arrow-wrap{
+  position: relative;
+  padding: 10px 0 10px 0;
+  height: 40px;
+}
+.direction__arrow{
+  position: absolute;
+  left: 50%;
+  margin-right: -30px;
+  width: 60px;
+  height: 40px;
+  background-image: url("/assets/img/icons/dirct_arrow_b.png");
+  background-size: cover;
+}
 
 .home-obits__list-wrap{
   width: 96%;
@@ -24,6 +40,7 @@
   overflow: hidden;
 }
 .home-page__obits-arrow-left, .home-page__obits-arrow-right{
+  top: 72%;
   z-index: 9999;
   position: absolute;
   cursor: pointer;

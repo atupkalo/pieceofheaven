@@ -1,19 +1,15 @@
 extends ../_template
 
 block variables
-    - var admin = 'Home page'
+    - var title = 'funeral home/admin'
+    - var main_js = '/assets/js/admin.js'
+    - var main_js = '/assets/js/admin.js'
 
 block content
     .admin__header
         .admin__header-title   admin
         .admin__header-desc Piece of Heaven funeral and cremation services
     .admin__content
-        .login__popup
-            form.login__form#login-form
-                .login__error
-                input.admin-login__input(type="text" placeholder="login" name="login")
-                input.admin-login__input(type="text" placeholder="password" name="password")
-                input.admin__button(type="button" value="submit")
         .obits__data-wrap
             form.obits__data-form#obits-data
                 input.admin-obits__input(type="text" placeholder="name" name="name")
@@ -21,7 +17,7 @@ block content
                 input.admin-obits__input(type="date" placeholder="date" name="date")
                 input.admin-obits__input(type="text" placeholder="cemetery" name="cemetery")
                 input.admin-obits__input(type="text" placeholder="text" name="text")
-                input(type="file" name="picture")
+                input.admin-obits__input--file(type="file" name="picture")
                 input.admin__button(type="button" value="submit")
         .admin__result
     .admin__footer
