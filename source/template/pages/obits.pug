@@ -1,9 +1,9 @@
 extends ../_template
 
 block variables
-    - var title = 'funeral home/obits'
-    - var jsfileName = '/assets/js/obits.js'
-    - var main_js = '/assets/js/app.js'
+    - var title = 'funeral home/obits';
+    - var jsfileName = '/assets/js/obits.js';
+    - var map = '';
 block content
     .popup_menu__burger
         img.popup_menu__burger-icon(src="assets/img/icons/burger_w.png" alt="menu icon")
@@ -11,7 +11,6 @@ block content
     include ../common/header
     .main-container
         include ../common/menu
-        include ../common/under_menu
         include ../common/obits_content
     include ../common/footer
 

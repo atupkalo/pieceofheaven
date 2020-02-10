@@ -11,17 +11,19 @@
 }
 
 .header__title{
-  padding: 15px;
+  padding: 0 0 50px 0;
   background: rgba(#000, .5);
   @include flex(column, center, center);
 }
 .header__title-pic--wrap{
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 .header__title-pic{
   width: 100%;
 }
 
 .header__desc{
-  @include font(28px, $text, #fff);
+  height: 60px;
+  opacity: 0;
+  @include font(0, $text, #fff);
 }

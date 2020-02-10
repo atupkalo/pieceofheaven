@@ -130,36 +130,175 @@ function addElem(origin){
     sliderItems[origin].appendChild(divLink);
 };
 
-//---------------------------------------------------------------------------------------- header scroll
+window.onload = function(){
 
-const headerScroll = function(block, amount, wScroll) {
-    let percents = wScroll / amount + '%';
+    //---------------------------------------------------------------------------------------- header scroll
 
-    block.style.transform = 'translateY(' + percents + ')';
-};
+    const headerScroll = function(block, amount, wScroll) {
+        let percents = wScroll / amount + '%';
 
-const mainHeaderBg = document.querySelector('.main_header__bg');
-const mainHeaderTitle = document.querySelector('.main_header__title');
+        block.style.transform = 'translateY(' + percents + ')';
+    };
 
-window.addEventListener('scroll', function(){
-    headerScroll(mainHeaderBg, -30, window.scrollY);
-    headerScroll(mainHeaderTitle, 17, window.scrollY);
-});
+    const mainHeaderBg = document.querySelector('.main_header__bg');
+    const mainHeaderTitle = document.querySelector('.main_header__title');
+
+    window.addEventListener('scroll', function(){
+        headerScroll(mainHeaderBg, -30, window.scrollY);
+        headerScroll(mainHeaderTitle, 17, window.scrollY);
+    });
 
 //-------------------------------------------------------------------------------------- direction arrow
-const arrowDiv = document.querySelector('.direction__arrow');
-const currPose = ['50%', '48%', '46%', '44%'];
-let que = 0;
-function changeColor(a, b){
-    arrowDiv.style.left = a[b];
-}
-function increase (){
-   que++;
-   if(que > 3){
-       que = 0;
-   }
-    changeColor(currPose, que);
+    const arrowArr = document.querySelectorAll('.direction__arrow');
+    let que = 5;
+    let prev = que -1;
+
+    function changeBg(a, b){
+        const imgLight = document.createElement('img');
+        imgLight.classList.add('arrow__pic');
+        imgLight.setAttribute('src', '/assets/img/icons/direct_arrow.png');
+
+        const imgDark = document.createElement('img');
+        imgDark.classList.add('arrow__pic');
+        imgDark.setAttribute('src', '/assets/img/icons/direct_arrow_d.png');
+        arrowArr[b].innerHTML = '';
+        arrowArr[b].appendChild(imgDark);
+        arrowArr[a].innerHTML = '';
+        arrowArr[a].appendChild((imgLight));
+    }
+
+    function increase (){
+
+        changeBg(que, prev);
+        que--;
+        prev--;
+        if(que < 0){
+            return que = 5;
+        };
+        if(prev < 0){
+            return prev = 5;
+        };
+
+    };
+
+    setInterval(increase, 400);
+
+//-------------------------------------------------------------------------- menu pointer
+
+    const menuItems = document.querySelectorAll('.menu-item');
+    const itemsName = ['/index.html', '/about.html', '/obits.html', '/services.html', '/pre-planning.html', '/feedbacks.html', '/contacts.html'];
+    for(let i = 0; i < menuItems.length; i++){
+        if(location.pathname === itemsName[i]){
+            menuItems[i].classList.add('menu-item-active');
+        }
+    };
+    const menu = document.querySelector('.menu__list');
+    const headerH = document.querySelector('.main_header').getBoundingClientRect().height;
+
+    window.addEventListener('scroll', function(){
+        let scrollY = window.scrollY;
+        if(headerH <= scrollY){
+            menu.classList.add('menu__fixed');
+        };
+        if(headerH >= scrollY){
+            menu.classList.remove('menu__fixed');
+        }
+    });
+
+    const doSlideMenu = function(){
+        const popUpMenu = document.querySelector('.popup_container'),
+            popupBurger = document.querySelector('.popup_menu__burger'),
+            popupCross = document.querySelector('.popup_menu__cross');
+        const doSlide = function(target, amount){
+            target.style.left = amount + 'px';
+        };
+        popupBurger.addEventListener('click', function(){
+            doSlide(popUpMenu, 0);
+            console.log();
+        });
+        popupCross.addEventListener('click', function(){
+            doSlide(popUpMenu, -200);
+        });
+    };
+    doSlideMenu();
 };
- setInterval(increase, 400);
+    //------------------------------------------------------------- desk-top
+    const textFloat = anime({
+        targets: '.main_header__title-maindesc',
+        opacity: '1',
+        fontSize: '42px',
+        autoplay: false,
+        easing: 'linear',
+        duration: 700
+    });
+    const textFloatB = anime({
+        targets: '.main_header__title-secdesc',
+        opacity: '1',
+        fontSize: '22px',
+        autoplay: false,
+        easing: 'linear',
+        duration: 700
+    });
+    const textFloatSlogan = anime({
+        targets: '.main_header__title-slogan',
+        opacity: '1',
+        marginLeft: '0',
+        autoplay: false,
+        easing: 'linear',
+        duration: 700
+    });
+
+    //--------------------------------------------------------------------mobile
+    const textFloat_m = anime({
+        targets: '.main_header__title-maindesc',
+        opacity: '1',
+        fontSize: '36px',
+        autoplay: false,
+        easing: 'linear',
+        duration: 700
+    });
+    const textFloatB_m = anime({
+        targets: '.main_header__title-secdesc',
+        opacity: '1',
+        fontSize: '18px',
+        autoplay: false,
+        easing: 'linear',
+        duration: 700
+    });
+
+
+
+    window.addEventListener('load', function(){
+        const windowW = window.innerWidth;
+        const homeTitle = document.querySelectorAll('.home__main-title');
+        window.addEventListener('scroll', function(){
+            const windowS = window.scrollY;
+
+                if(windowS >= 100){
+                        homeTitle[0].style.opacity = '1';
+                        homeTitle[1].style.opacity = '1';
+                };
+
+        });
+
+        if(windowW > 920){
+            setTimeout(function(){
+                textFloat.restart();
+                textFloatB.restart();
+            }, 300);
+        };
+        if(windowW < 920){
+            setTimeout(function(){
+                textFloat_m.restart();
+                textFloatB_m.restart();
+            }, 300);
+        }
+        setTimeout(function(){
+            textFloatSlogan.restart();
+        }, 500);
+
+    });
+
+
 
 

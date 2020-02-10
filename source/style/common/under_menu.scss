@@ -1,14 +1,19 @@
+.under_menu{
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  padding: 0 50px;
+}
 .under_menu__list{
   padding: 10px 50px;
   @include flex(row, space-between, center);
 }
 .under_menu__item{
   @include flex(row, flex-start, center);
-  @include font(32px, $text, $gray);
+  @include font(24px, $title, $gray);
 }
 .under_menu__icon-box{
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
 }
 .under_menu__icon{
   width: 100%;

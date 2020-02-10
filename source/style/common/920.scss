@@ -16,10 +16,9 @@
   .top_line__content{
     padding: 10px 80px;
   }
-  .header__desc{
-    font-size: 22px;
+  .main_header__title-picwrap{
+    width: 96%;
   }
-
   .contact__list{
     width: 80%;
   }
@@ -38,7 +37,8 @@
     font-size: 18px;
   }
   .main_header__title-maindesc{
-    font-size: 36px;
+    min-height: 40px;
+    font-size: 22px;
   }
   .footer-menu__item{
     padding: 5px;
@@ -46,7 +46,7 @@
   .footer-menu__link{
     font-size: 16px;
   }
-  footer__refer-icon{
+  .footer__refer-icon{
     width: 35px;
     height: 35px;
   }
@@ -65,18 +65,18 @@
   .main_header__title-secdesc{
     margin-bottom:50px;
   }
+  //--------------------------------------------------- services
+
+  .services__tabs-item{
+    font-size: 24px;
+  }
   //----------------------------------------------------home slider
 
   .home-page__obits-arrow-left, .home-page__obits-arrow-right{
     top: 98%;
   }
   //----------------------------------------------------obits
-  .obits__info-title{
-    font-size: 28px;
-  }
-  .obits__info-name, .obits__info-year{
-    font-size: 24px;
-  }
+
   .obits__info-btm-wrap{
     width: 100%;
   }

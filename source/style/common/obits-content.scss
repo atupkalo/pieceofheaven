@@ -89,6 +89,7 @@
   margin-left: 30px;
 }
 .obits__item-text{
-  @include font(20px, $text, $gray);
+  @include font(22px, $text, $gray);
   padding: 10px 5px;
+  line-height: 32px;
 }

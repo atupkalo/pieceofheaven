@@ -70,12 +70,17 @@
   background-color: rgba(0, 0, 0, 0.5);
 }
 .main_header__title-maindesc{
-  @include font(52px, $title, #fff);
+  min-height: 60px;
+  opacity: 0;
+  @include font(32px, $title, #fff);
 }
 .main_header__title-secdesc{
-  @include font(20px, $text, #fff);
+  min-height: 40px;
+  @include font(16px, $text, #fff);
   margin-bottom: 100px;
+  opacity: 0;
 }
 .main_header__title-slogan{
   @include font(28px, $text, #fff);
+  opacity: 0;
 }

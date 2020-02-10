@@ -1,7 +1,4 @@
 @media(max-width: 768px){
-  p{
-    line-height: 24px;
-  }
   .top_line__content{
     padding: 5px 10px;
   }
@@ -16,10 +13,30 @@
     font-size: 18px;
   }
   .main_header__title-slogan{
-    font-size: 18px;
+    font-size: 22px;
   }
 
-  //---------------------------------------------  under  menu
+  .home__main-title{
+    font-size: 32px;
+    line-height: 44px;
+  }
+  .home__main-desc{
+    width: 96%;
+    padding: 30px 0;
+  }
+  .home__direct-links-wrap{
+    flex-direction: column;
+    padding: 30px 0;
+  }
+  .home__direct-link{
+    font-size: 18px;
+    padding: 5px 15px;
+    margin: 5px 0;
+  }
+    //---------------------------------------------  under  menu
+  .under_menu{
+    padding: 0;
+  }
   .under_menu__icon-box{
     width: 30px;
     height: 30px;
@@ -30,7 +47,6 @@
   }
   .under_menu__list{
     padding: 5px 10px;
-    margin: 2px;
   }
 
   //----------------------------------------------- home obits
@@ -53,9 +69,6 @@
   .about__top-desc{
     padding: 20px 15px;
   }
-  .about__title-desc-p{
-    line-height: 32px;
-  }
   .about__employee-picwrap{
     margin-bottom: 20px;
   }
@@ -75,7 +88,12 @@
   .about__employee-persinfo{
     width: 90%;
   }
-
+  .about__employee-persinfo-desc{
+    padding-bottom: 10px;
+  }
+  .about__employee-persinfo-position{
+    color: #000;
+  }
     //  ----------------------------------------------------- obits
   .search_input{
     margin-right: 0;
@@ -83,6 +101,9 @@
   .obits__info-btm-wrap{
     width: 70%;
     @include flex(column, center, space-between);
+  }
+  .obits__info-title{
+    font-size: 32px;
   }
   .obits__info-date{
     margin-left: 0;
@@ -121,73 +142,50 @@
   }
   .obits__item-text{
     text-align: center;
-    font-size: 16px;
   }
 //  -------------------------------------------------------------   services
-  .services__list-item{
+  .services__tabs-item{
     font-size: 18px;
   }
+  .services__tabs-title{
+    padding: 10px;
+  }
+  .services__tabs-cont-list{
+    min-height: 920px;
+  }
   .services__main-desc{
-    text-align: center;
-    font-size: 16px;
-    margin-bottom: 20px;
+  text-align: center;
+    width: 96%;
   }
-  .services__first-list, .services__second-list{
-    margin: 10px auto;
-    padding: 5px;
-    font-size: 16px;
+  .services__hilight-list{
+    flex-direction: column;
   }
-  .services__second-list{
-    width: 300px;
-  }
-  .services__main-section-text{
-    font-size: 16px;
-  }
-  .cremation__content{
-    padding: 5px;
-    font-size: 16px;
-    text-align: center;
-  }
-  .gen-price__desc{
-    font-size: 16px;
+  .services__hilight-list-item{
+    padding: 15px 0;
   }
   .price-list{
-   display: none;
+    display: none;
   }
   .price-list--s{
     display: block;
   }
-  .gen-price_-worrning{
-    font-size: 16px;
-  }
-
-
-
-  .ss__picter-wrap{
-    float: none;
-    margin: 0 auto;
-    width: 150px;
-    height: 150px;
-  }
   .ss__text{
-    font-size: 16px;
-    padding: 10px;
+    font-size: 18px;
+    padding: 20px;
+    line-height: 26px;
+  }
+  .ss__picter-wrap{
+    margin: 10px;
   }
   .ss__text-inner-list-wrap{
-    width: 96%;
-    padding: 5px;
-    margin: 0 auto;
-  }
-  .ss__inner-list-item{
-    font-size: 16px;
-    font-weight: bold;
-    padding: 5px 0;
+    padding: 10px;
+    width: 90%;
   }
 
-
-
+  //------------------------------------------------------------pre-plan and feedback
   .preplan__content{
-    font-size: 16px;
+    font-size: 20px;
+    line-height: 28px;
   }
   .preplan__title{
     font-size: 36px;
@@ -203,7 +201,7 @@
     width: 280px;
   }
 
-//  ------------------------------------------------  contacts
+ // ------------------------------------------------  contacts
   .contacts__title{
     font-size: 36px;
   }

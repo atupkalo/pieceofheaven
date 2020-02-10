@@ -1,4 +1,15 @@
+.menu{
+  width: 100%;
+  z-index: 200;
+}
+.menu__fixed{
+  opacity: .7;
+  position: fixed;
+  top: 0;
+}
 .menu__list{
+  z-index: 9999;
+  width: 100%;
   @include flex(row, center, center);
 }
 
@@ -10,12 +21,14 @@
   width: 13%;
   border-right: 1px solid #fff;
   transition-duration: .3s;
+  border-bottom: 4px solid transparent;
   &:hover{
     background: $lightBlue;
   }
-  
 }
-
+.menu-item-active{
+  border-bottom: 4px solid #FFB91F;
+}
 .pseudo_element{
   position: absolute;
   top: -9px;
@@ -28,8 +41,8 @@
 }
 .menu__link{
   display: block;
-  padding: 10px 0;
-  @include font(22px, $text, #fff);
+  padding: 7px 0;
+  @include font(18px, $text, #fff);
   transition-duration: .3s;
   &:hover{
     color: $gray;

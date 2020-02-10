@@ -2,8 +2,8 @@ extends ../_template
 
 block variables
   - var title = 'funeral home'
-  - var jsfileName = '/assets/js/\index.js'
-  - var main_js = '/assets/js/app.js'
+  - var jsfileName = '/assets/js/index.js';
+  - var map = '';
 
 block content
   .popup_menu__burger
@@ -13,7 +13,6 @@ block content
   include ../common/main_header
   .main-container
     include ../common/menu
-    include ../common/under_menu
     include ../common/home_content
   include ../common/footer
 

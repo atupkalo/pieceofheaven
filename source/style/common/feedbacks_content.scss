@@ -2,6 +2,8 @@
   @include font(48px, $title, $gray);
   padding: 40px 0;
   text-align: center;
+  opacity: 0;
+  transition: 1.5s;
 }
 .feedback__content-box{
   overflow: scroll;

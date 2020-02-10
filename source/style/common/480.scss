@@ -12,14 +12,14 @@
     top: 75px;
   }
   .main_header__title-maindesc{
-    font-size: 24px;
     margin-bottom: 5px;
   }
   .header__desc{
-    font-size:18px;
+    padding: 0 10px;
+    text-align: center;
   }
   .main_header__title-secdesc{
-    font-size: 16px;
+    font-size: 12px;
   }
   .under_menu__item{
     @include flex(column, flex-start, center);
@@ -29,7 +29,6 @@
     text-align: center;
   }
   .obits__title{
-    font-size: 36px;
     padding: 25px 0 32px;
   }
 
@@ -60,24 +59,23 @@
     font-size:9px;
   }
 //  -------------------------------------------------------------------  about
-  .about__title{
-    font-size: 36px;
-  }
+
   .about__top-desc{
     padding: 20px 5px;
   }
   .about__title-desc{
-    font-size: 18px;
+    font-size: 26px;
+    line-height: 32px;
   }
   .about__employee-picwrap{
     float: none;
     margin: 0 auto;
   }
-  .about__employee-persinfo-name, .about__employee-persinfo-lastname{
-    font-size: 22px;
-  }
+  //.about__employee-persinfo-name, .about__employee-persinfo-lastname{
+  //  font-size: 32px;
+  //}
   .about__employee-persinfo-desc{
-    font-size: 16px;
+    font-size: 22px;
   }
   .about__employee-persinfo-name, .about__employee-persinfo-lastname, .about__employee-persinfo-position, .about__employee-persinfo-desc{
     text-align: center;
@@ -96,19 +94,7 @@
   }
 //------------------------------------------------------------------------  services
   .services__title{
-    font-size:36px;
     padding: 20px 0;
-  }
-  .services__item-title{
-    font-size: 22px;
-  }
-  .services__item-title-arrow{
-    width: 25px;
-    height: 20px;
-    margin-left: 5px;
-  }
-  .services__item-title-wrap{
-    padding: 4px 5px;
   }
 }
 

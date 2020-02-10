@@ -6,14 +6,14 @@
 .about__title{
   @include font(48px, $title, $gray);
   margin-bottom: 30px;
+  opacity: 0;
+  transition: 1.5s;
 }
 .about__title-desc{
   @include font(28px, $text, $gray);
   padding: 5px;
   font-weight: bold;
-}
-.about__title-desc-p{
-  line-height: 42px;
+  line-height: 48px;
 }
 
 //----------------------------------------------------------------------------------   about slider
@@ -108,9 +108,9 @@
   margin-bottom: 15px;
 }
 
+
+
 //---------------------------------------------------------- employee blocks
-
-
 
 .about__employee{
   padding: 5px;
@@ -120,8 +120,6 @@
   min-height: 500px;
   @include flex(row, center, center);
 }
-
-
 .about__employee-picwrap{
   overflow: hidden;
   width: 300px;
@@ -145,9 +143,11 @@
   @include font(32px, $title, $gray);
 }
 .about__employee-persinfo-position {
-  @include font(22px, $title, $gray);
+  @include font(24px, $title, $gray);
   padding: 15px 0;
+  font-weight: bold;
 }
 .about__employee-persinfo-desc{
   @include font(20px, $text, $gray);
+  line-height: 32px;
 }
