@@ -32,6 +32,10 @@
   @include flex(row, center, center);
 }
 .services__tabs-item{
+  border-top: 2px solid transparent;
+  border-right: 2px solid transparent;
+  border-left: 2px solid transparent;
+  transition: .3s;
   width: 33%;
   cursor: pointer;
   text-align: center;
