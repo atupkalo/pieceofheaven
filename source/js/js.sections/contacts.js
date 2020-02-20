@@ -56,6 +56,7 @@ const itemsName = ['/index.html', '/about.html', '/obits.html', '/services.html'
 for(let i = 0; i < menuItems.length; i++){
     if(location.pathname === itemsName[i]){
         menuItems[i].classList.add('menu-item-active');
+        document.querySelector('.header__page-name').innerHTML = 'Our contacts';
     }
 };
 const menu = document.querySelector('.menu__list');
@@ -113,43 +114,42 @@ document.addEventListener('ready', function(){
 
 
 const HeaderTitle = anime({
-    targets: '.header__desc',
+    targets: '.header__page-name',
     opacity: '1',
     fontSize: '36px',
     autoplay: false,
     easing: 'linear',
-    duration: 700
+    duration: 500
 });
 const HeaderTitle_m = anime({
-    targets: '.header__desc',
+    targets: '.header__page-name',
     opacity: '1',
     fontSize: '22px',
     autoplay: false,
     easing: 'linear',
-    duration: 700
+    duration: 500
 });
 
-window.onload = function(){
-    const windowW = window.innerWidth;
-    if(windowW > 920){
-        setTimeout(function(){
-            HeaderTitle.restart();
-        }, 300);
-    };
-    if(windowW < 920){
-        setTimeout(function(){
-            HeaderTitle_m.restart();
-        }, 300);
-    };
 
-    const pageTitle = document.querySelector('.contacts__title');
-    window.addEventListener('scroll', function(){
-        const windowS = window.scrollY;
-
-        if(windowS >= 100){
-            pageTitle.style.opacity = '1';
-        };
-
-    });
-
+const windowW = window.innerWidth;
+if(windowW > 920){
+    setTimeout(function(){
+        HeaderTitle.restart();
+    }, 300);
 };
+if(windowW < 920){
+    setTimeout(function(){
+        HeaderTitle_m.restart();
+    }, 300);
+};
+
+const pageTitle = document.querySelector('.contacts__title');
+window.addEventListener('scroll', function(){
+    const windowS = window.scrollY;
+
+    if(windowS >= 100){
+        pageTitle.style.opacity = '1';
+    };
+
+});
+

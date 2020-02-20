@@ -11,7 +11,6 @@
 }
 
 .header__title{
-  padding: 0 0 50px 0;
   background: rgba(#000, .5);
   @include flex(column, center, center);
 }
@@ -24,6 +23,11 @@
 
 .header__desc{
   height: 60px;
-  opacity: 0;
-  @include font(0, $text, #fff);
+  @include font(24px, $text, #fff);
+}
+.header__page-name{
+  opacity: .4;
+  margin-top: -50px;
+  @include font(16px, $text, #fff);
+  height: 100px;
 }

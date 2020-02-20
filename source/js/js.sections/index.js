@@ -255,7 +255,7 @@ window.onload = function(){
         fontSize: '36px',
         autoplay: false,
         easing: 'linear',
-        duration: 700
+        duration: 500
     });
     const textFloatB_m = anime({
         targets: '.main_header__title-secdesc',
@@ -263,41 +263,40 @@ window.onload = function(){
         fontSize: '18px',
         autoplay: false,
         easing: 'linear',
-        duration: 700
+        duration: 500
     });
 
 
 
-    window.addEventListener('load', function(){
-        const windowW = window.innerWidth;
-        const homeTitle = document.querySelectorAll('.home__main-title');
-        window.addEventListener('scroll', function(){
-            const windowS = window.scrollY;
 
-                if(windowS >= 100){
-                        homeTitle[0].style.opacity = '1';
-                        homeTitle[1].style.opacity = '1';
-                };
+    const windowW = window.innerWidth;
+    const homeTitle = document.querySelectorAll('.home__main-title');
+    window.addEventListener('scroll', function(){
+        const windowS = window.scrollY;
 
-        });
+            if(windowS >= 100){
+                    homeTitle[0].style.opacity = '1';
+                    homeTitle[1].style.opacity = '1';
+            };
 
-        if(windowW > 920){
-            setTimeout(function(){
-                textFloat.restart();
-                textFloatB.restart();
-            }, 300);
-        };
-        if(windowW < 920){
-            setTimeout(function(){
-                textFloat_m.restart();
-                textFloatB_m.restart();
-            }, 300);
-        }
+    });
+
+    if(windowW > 920){
         setTimeout(function(){
-            textFloatSlogan.restart();
-        }, 500);
+            textFloat.restart();
+            textFloatB.restart();
+        }, 300);
+    };
+    if(windowW < 920){
+        setTimeout(function(){
+            textFloat_m.restart();
+            textFloatB_m.restart();
+        }, 300);
+    }
+    setTimeout(function(){
+        textFloatSlogan.restart();
+    }, 500);
 
-    });
 
 
 

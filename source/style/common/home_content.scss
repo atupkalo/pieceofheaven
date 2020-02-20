@@ -32,13 +32,7 @@
     box-shadow: 0px 0px 6px 4px rgba(0, 0, 255, .2);
   }
 }
-.obits__title{
-  @include font(48px, $title, $gray);
-  padding-top: 55px;
-  text-align: center;
-  opacity: 0;
-  transition: 1s;
-}
+
 .direction__arrow-wrap{
   position: relative;
   @include flex(row, center, center);

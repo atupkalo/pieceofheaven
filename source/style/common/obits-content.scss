@@ -2,6 +2,14 @@
   background-image: url("/assets/img/bg.png");
   background-size: cover;
 }
+.obits__title{
+  @include font(48px, $title, $gray);
+  padding-top: 55px;
+  text-align: center;
+  opacity: 0;
+  transition: 1s;
+  margin-bottom: 30px;
+}
 .searching-form{
   @include flex(row, center, center);
   margin-bottom: 10px;
@@ -12,7 +20,6 @@
   padding: 7px 15px;
   background: #fff;
   box-shadow: 0 0 8px 2px rgba(0, 0, 0, .2);
-  //padding: 7px 15px;
   @include font(18px, $text, $blue);
   border: 1px solid $blue;
   transition: .3s;

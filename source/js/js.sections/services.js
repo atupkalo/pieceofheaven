@@ -44,6 +44,7 @@ const itemsName = ['/index.html', '/about.html', '/obits.html', '/services.html'
 for(let i = 0; i < menuItems.length; i++){
     if(location.pathname === itemsName[i]){
         menuItems[i].classList.add('menu-item-active');
+        document.querySelector('.header__page-name').innerHTML = 'Our services';
     }
 };
 const menu = document.querySelector('.menu__list');
@@ -77,23 +78,23 @@ const doSlideMenu = function(){
 doSlideMenu();
 
 const HeaderTitle = anime({
-    targets: '.header__desc',
+    targets: '.header__page-name',
     opacity: '1',
     fontSize: '36px',
     autoplay: false,
     easing: 'linear',
-    duration: 700
+    duration: 500
 });
 const HeaderTitle_m = anime({
-    targets: '.header__desc',
+    targets: '.header__page-name',
     opacity: '1',
     fontSize: '22px',
     autoplay: false,
     easing: 'linear',
-    duration: 700
+    duration: 500
 });
 
-window.onload = function(){
+
     const windowW = window.innerWidth;
     if(windowW > 920){
         setTimeout(function(){
@@ -116,7 +117,7 @@ window.onload = function(){
 
     });
 
-};
+
 
 //------------------------------------------------------      tabs
 
