@@ -2,6 +2,15 @@
   background-image: url("/assets/img/bg.png");
   background-size: cover;
 }
+//----------------------------------------------------------------  Up coming
+.obits__upcoming{
+  padding-bottom: 120px;
+}
+.upcoming__title{
+  text-align: center;
+  @include font(42px, $title, $gray);
+  padding: 120px 0 60px 0;
+}
 .obits__title{
   @include font(48px, $title, $gray);
   padding-top: 55px;
@@ -10,6 +19,42 @@
   transition: 1s;
   margin-bottom: 30px;
 }
+.upcoming__list{
+  @include flex(column, center, center);
+  margin-bottom: 40px;
+}
+.upcoming__list-item{
+  padding: 7px 0;
+  @include font(20px, $text, $gray);
+  @include flex(row, center, center);
+}
+.upcoming__list-item-name{
+  width: 200px;
+  font-weight: bold;
+  text-align: right;
+}
+.upcoming__list-item-input{
+  width: 200px;
+  text-align: left;
+  margin-left: 30px;
+}
+.upcoming__btn{
+  @include flex(row, center, center);
+}
+.upcoming__link--flowers, .upcoming__link--contacts{
+  padding: 7px 25px;
+  @include font(20px, $text, $blue);
+  border: solid 1px $blue;
+  transition: .3s;
+  &:hover {
+    background: $blue;
+    color: #fff;
+  }
+}
+.upcoming__link--contacts{
+  margin-left: 20px;
+}
+
 .searching-form{
   @include flex(row, center, center);
   margin-bottom: 10px;
@@ -44,59 +89,43 @@
 }
 
 //-------------------------------------------------------- obits items
-
-
-.obits__item{
-  padding-top: 50px;
-  margin: 0 auto;
-  border-bottom: 1px solid #ccc;
-  min-height: 600px;
-  width: 80%;
-  @include flex(column, flex-start, center);
+.obits__list{
+  @include flex(row, center, center);
+  flex-wrap: wrap;
 }
-.obits__info-wrap{
-  @include flex(row, center, flex-start);
-}
-
-.obits__pic-wrap{
-  overflow: hidden;
+.obits__list-item{
   width: 300px;
-  height: 400px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #7a7979;
+  padding: 3px;
 }
-.obits__pic{
+.obits__list-img{
   width: 100%;
 }
-.obits__info{
-  margin-left: 50px;
+.obits__list-img-wrap{
+  max-height: 350px;
+  overflow: hidden;
 }
-.obits__info-top{
-  text-align: center;
-  margin-bottom: 40px;
-}
-.obits__info-title{
-  @include font(42px, $title, $blue);
-  padding-bottom: 10px;
-}
-.obits__info-name, .obits__info-year {
-  @include font(32px, $title, $gray);
-}
-.obits__info-btm{
-  @include flex(column, center, center);
-}
-.obits__info-btm-wrap{
-  width: 70%;
-  @include flex(row, center, space-between);
-}
-.obits__info-date--class, .obits__info-cemetery--class{
-  @include font(20px, $text, $gray);
-}
-.obits__info-date, .obits__info-cemetery{
-  @include font(20px, $text, $gray);
-  font-weight: bold;
-  margin-left: 30px;
-}
-.obits__item-text{
+
+.obits__list-firstname, .obits__list-lastname{
+  padding: 3px 0;
   @include font(22px, $text, $gray);
-  padding: 10px 5px;
-  line-height: 32px;
 }
+.obits__list-links-wrap{
+  display: flex;
+  flex-direction: row-reverse;
+}
+.obits__list-link{
+  font-size: 18px;
+  padding: 7px 20px;
+  border: 1px solid $blue;
+  color: $blue;
+  margin-bottom: 20px;
+  transition-duration: .3s;
+  &:hover{
+    color: #fff;
+    background: $blue;
+  }
+}
+

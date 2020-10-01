@@ -3,14 +3,26 @@ extends ../_template
 block variables
     - var title = 'Piece fo Heaven funeral home/obits';
     - var jsfileName = '/assets/js/obits.js';
-    - var map = '';
+    - var map = '#';
 block content
     .popup_menu__burger
         img.popup_menu__burger-icon(src="assets/img/icons/burger_w.png" alt="menu icon")
     include ../common/pop-up_menu
-    include ../common/header
+    include ../common/main_header
     .main-container
         include ../common/menu
+        .obits__upcoming
+            .upcoming__title Up coming services
+            ul.upcoming__list
+                -
+                    var upcoming = ['Name', 'When', 'Time', 'Cemetery', 'Viewing', 'Viewing time'];
+                each item in upcoming
+                    li.upcoming__list-item
+                        .upcoming__list-item-name #{item}
+                        .upcoming__list-item-input  test-test
+            .upcoming__btn
+                a(href="https://lucysflower.com").upcoming__link--flowers order flowers
+                a(href="/contacts.html").upcoming__link--contacts  contacts
         include ../common/obits_content
     include ../common/footer
 

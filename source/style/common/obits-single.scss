@@ -1,0 +1,93 @@
+
+.obits-card{
+  @include flex(row, center, center);
+  background: url("/assets/img/obits_bg.png");
+  background-repeat: repeat;
+}
+.obits-card__left{
+  padding: 60px 10px 10px 10px;
+  width: 30%;
+}
+.obits-card-img{
+  width: 100%;
+}
+
+//------------------------------------------- right
+.obits-card__right{
+  padding: 0 50px;
+  width: 70%;
+}
+.obits-card__title{
+
+  @include font(32px, $text, $gray);
+  padding: 60px 0 30px 0;
+}
+.obits-card__info{
+  width: 60%;
+  margin-bottom: 30px;
+}
+.obits-card__cemetery, .obits-card__dates{
+  @include font(22px, $text, $gray);
+  padding: 5px 0;
+}
+.obits-card__name{
+  @include font(24px, $text, $blue);
+  padding-bottom: 5px;
+  font-weight: bold;
+}
+.obits-wishes{
+  background: #ffffff;
+  padding: 10px;
+  width: 100%;
+  overflow: scroll;
+  height: 400px;
+  border: 1px solid $blue;
+}
+.obits-wishes__inner-container{
+  margin-bottom: 50px;
+}
+.obits-wishes__item{
+  @include font(18px, $text, $gray)
+  padding-bottom: 10px;
+}
+
+//------------------------------------------- form
+.obits-bg{
+  background-image: url('/assets/img/obits_bg.png');
+  background-repeat: repeat;
+  padding-bottom: 120px;
+}
+.obits-wishes-form{
+  box-shadow: 2px 2px 10px 4px rgba(0, 0, 0, .4);
+  background: #ffffff;
+  @include flex(column, flex-start, center);
+  margin: 0 auto;
+  width: 50%;
+  padding-bottom: 120px;
+  border: 1px solid $blue;
+}
+.obits-form__title{
+  padding: 90px 0 60px 0;
+  @include font(42px, $title, $gray);
+  text-align: center;
+}
+.sympathy__name-imput{
+  border: 1px solid $gray;
+}
+.sympathy__text{
+  width: 90%;
+  height: 100px;
+}
+.sympathy__submit{
+  background: transparent;
+  cursor: pointer;
+  padding: 10px 40px;
+  @include font(20px, $text, $blue);
+  border: solid 1px $blue;
+  transition: .3s;
+
+  &:hover {
+    background: $blue;
+    color: #fff;
+  }
+}

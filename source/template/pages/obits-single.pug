@@ -1,0 +1,40 @@
+extends ../_template
+
+block variables
+    - var title = 'Piece fo Heaven funeral home/obituaries'
+    - var jsfileName = '#';
+    - var map = '#';
+
+block content
+    .popup_menu__burger
+        img.popup_menu__burger-icon(src="assets/img/icons/burger_w.png" alt="menu icon")
+    include ../common/pop-up_menu
+    include ../common/main_header
+    include ../common/menu
+    .main-container
+        .obits-card
+            .obits-card__left
+                img.obits-card-img(src="assets/img/zorya.jpg")
+            .obits-card__right
+                .obits-card__info
+                    .obits-card__title In loving memory of
+                    .obits-card__name   name:
+                    .obits-card__dates  date
+                    .obits-card__cemetery  Emanuel
+                .obits-wishes
+                    .obits-wishes__container
+                        .obits-wishes__inner-container
+                            .obits-wishes__name.obits-wishes__item  Name
+                            .obits-wishes__date.obits-wishes__item   00/00/0000
+                            .obits-wihses__text.obits-wishes__item   Text, Text, Text
+                        .obits-wishes__inner-container
+                            .obits-wishes__name.obits-wishes__item   Name
+                            .obits-wishes__date.obits-wishes__item   00/00/0000
+                            .obits-wihses__text.obits-wishes__item   Text, Text, Text Text, Text, Text some text Text some text Text, Text, Text Text, Text, Text some text Text some text Text, Text, Text Text, Text, Text some text Text some text Text, Text, Text Text, Text, Text some text Text some text Text, Text, Text Text, Text, Text some text Text some text Text, Text, Text Text, Text, Text some text Text some text Text, Text, Text Text, Text, Text some text Text some text
+        .obits-bg
+            .obits-form__title leave your sympathy
+            form.obits-wishes-form(id="obits-sympathy-form")
+                input(type="text" name="name" placeholder="your name").sympathy__name-imput
+                textarea(name="sympathy-text" placeholder="write your words here").sympathy__text
+                button.sympathy__submit submit
+    include ../common/footer

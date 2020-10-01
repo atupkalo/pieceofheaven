@@ -1,6 +1,6 @@
 .about__top-desc{
   text-align: center;
-  padding: 30px 50px;
+  padding-top: 30px;
 }
 
 .about__title{
@@ -10,10 +10,11 @@
   transition: 1.5s;
 }
 .about__title-desc{
-  @include font(28px, $text, $gray);
-  padding: 5px;
-  font-weight: bold;
-  line-height: 48px;
+  margin: 0 auto;
+  width: 60%;
+  @include font(24px, $text, $gray);
+  padding-bottom: 40px;
+  line-height: 36px;
 }
 
 //----------------------------------------------------------------------------------   about slider

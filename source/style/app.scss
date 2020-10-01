@@ -2,7 +2,7 @@ $blue: #4990c8;
 $lightBlue: #b6dff5;
 $gray: #4a5963;
 
-$text: 'Open Sans', sans-serif;
+$text: 'Noto+Sans', sans-serif;
 $title: 'Lora', serif;
 
 @mixin font ($size, $name, $color){
@@ -20,7 +20,6 @@ $title: 'Lora', serif;
 
 @import 'common/adjustments';
 @import 'common/main_header';
-@import 'common/header';
 @import 'common/menu';
 @import 'common/under_menu';
 @import 'common/home_content';
@@ -32,7 +31,7 @@ $title: 'Lora', serif;
 @import 'common/contacts_content';
 @import 'common/feedbacks_content';
 @import 'common/preplan_content';
-@import 'common/admin';
+@import 'common/obits-single';
 @import 'common/1500';
 @import 'common/920';
 @import 'common/768';

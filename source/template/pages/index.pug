@@ -1,14 +1,13 @@
 extends ../_template
 
 block variables
-  - var title = 'Piece fo Heaven funeral home'
+  - var title = 'Piece fo Heaven funeral home';
   - var jsfileName = '/assets/js/index.js';
-  - var map = '';
+  - var map = '#';
 
 block content
   .popup_menu__burger
       img.popup_menu__burger-icon(src="assets/img/icons/burger_w.png" alt="menu icon")
-      //.popup_menu__page-marker
   include ../common/pop-up_menu
   include ../common/main_header
   .main-container

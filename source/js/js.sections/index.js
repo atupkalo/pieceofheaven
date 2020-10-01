@@ -130,172 +130,37 @@ function addElem(origin){
     sliderItems[origin].appendChild(divLink);
 };
 
-window.onload = function(){
+//-----------------------------------------------------------------------  Arrow down
 
-    //---------------------------------------------------------------------------------------- header scroll
+    const arrowDown = document.querySelector('.header__arrow-down');
+    let changer = 0;
 
-    const headerScroll = function(block, amount, wScroll) {
-        let percents = wScroll / amount + '%';
-
-        block.style.transform = 'translateY(' + percents + ')';
+    function opacityChange(i){
+        if(i === 0){
+            arrowDown.style.opacity = 0;
+        }else if(i === 1){
+            arrowDown.style.opacity = 1;
+        };
     };
 
-    const mainHeaderBg = document.querySelector('.main_header__bg');
-    const mainHeaderTitle = document.querySelector('.main_header__title');
 
-    window.addEventListener('scroll', function(){
-        headerScroll(mainHeaderBg, -30, window.scrollY);
-        headerScroll(mainHeaderTitle, 17, window.scrollY);
-    });
+    setInterval(function(){
+        changer++;
 
-//-------------------------------------------------------------------------------------- direction arrow
-    const arrowArr = document.querySelectorAll('.direction__arrow');
-    let que = 5;
-    let prev = que -1;
-
-    function changeBg(a, b){
-        const imgLight = document.createElement('img');
-        imgLight.classList.add('arrow__pic');
-        imgLight.setAttribute('src', '/assets/img/icons/direct_arrow.png');
-
-        const imgDark = document.createElement('img');
-        imgDark.classList.add('arrow__pic');
-        imgDark.setAttribute('src', '/assets/img/icons/direct_arrow_d.png');
-        arrowArr[b].innerHTML = '';
-        arrowArr[b].appendChild(imgDark);
-        arrowArr[a].innerHTML = '';
-        arrowArr[a].appendChild((imgLight));
-    }
-
-    function increase (){
-
-        changeBg(que, prev);
-        que--;
-        prev--;
-        if(que < 0){
-            return que = 5;
-        };
-        if(prev < 0){
-            return prev = 5;
-        };
-
-    };
-
-    setInterval(increase, 400);
-
-//-------------------------------------------------------------------------- menu pointer
-
-    const menuItems = document.querySelectorAll('.menu-item');
-    const itemsName = ['/index.html', '/about.html', '/obits.html', '/services.html', '/pre-planning.html', '/feedbacks.html', '/contacts.html'];
-    for(let i = 0; i < menuItems.length; i++){
-        if(location.pathname === itemsName[i]){
-            menuItems[i].classList.add('menu-item-active');
+        if(changer > 1){
+            changer = 0;
         }
-    };
-    const menu = document.querySelector('.menu__list');
-    const headerH = document.querySelector('.main_header').getBoundingClientRect().height;
-
-    window.addEventListener('scroll', function(){
-        let scrollY = window.scrollY;
-        if(headerH <= scrollY){
-            menu.classList.add('menu__fixed');
-        };
-        if(headerH >= scrollY){
-            menu.classList.remove('menu__fixed');
-        }
-    });
-
-    const doSlideMenu = function(){
-        const popUpMenu = document.querySelector('.popup_container'),
-            popupBurger = document.querySelector('.popup_menu__burger'),
-            popupCross = document.querySelector('.popup_menu__cross');
-        const doSlide = function(target, amount){
-            target.style.left = amount + 'px';
-        };
-        popupBurger.addEventListener('click', function(){
-            doSlide(popUpMenu, 0);
-            console.log();
-        });
-        popupCross.addEventListener('click', function(){
-            doSlide(popUpMenu, -200);
-        });
-    };
-    doSlideMenu();
-};
-    //------------------------------------------------------------- desk-top
-    const textFloat = anime({
-        targets: '.main_header__title-maindesc',
-        opacity: '1',
-        fontSize: '42px',
-        autoplay: false,
-        easing: 'linear',
-        duration: 700
-    });
-    const textFloatB = anime({
-        targets: '.main_header__title-secdesc',
-        opacity: '1',
-        fontSize: '22px',
-        autoplay: false,
-        easing: 'linear',
-        duration: 700
-    });
-    const textFloatSlogan = anime({
-        targets: '.main_header__title-slogan',
-        opacity: '1',
-        marginLeft: '0',
-        autoplay: false,
-        easing: 'linear',
-        duration: 700
-    });
-
-    //--------------------------------------------------------------------mobile
-    const textFloat_m = anime({
-        targets: '.main_header__title-maindesc',
-        opacity: '1',
-        fontSize: '36px',
-        autoplay: false,
-        easing: 'linear',
-        duration: 500
-    });
-    const textFloatB_m = anime({
-        targets: '.main_header__title-secdesc',
-        opacity: '1',
-        fontSize: '18px',
-        autoplay: false,
-        easing: 'linear',
-        duration: 500
-    });
-
-
-
-
-    const windowW = window.innerWidth;
-    const homeTitle = document.querySelectorAll('.home__main-title');
-    window.addEventListener('scroll', function(){
-        const windowS = window.scrollY;
-
-            if(windowS >= 100){
-                    homeTitle[0].style.opacity = '1';
-                    homeTitle[1].style.opacity = '1';
-            };
-
-    });
-
-    if(windowW > 920){
-        setTimeout(function(){
-            textFloat.restart();
-            textFloatB.restart();
-        }, 300);
-    };
-    if(windowW < 920){
-        setTimeout(function(){
-            textFloat_m.restart();
-            textFloatB_m.restart();
-        }, 300);
-    }
-    setTimeout(function(){
-        textFloatSlogan.restart();
+        opacityChange(changer);
     }, 500);
+
+
+
+
+
+
+
+
+
 
 
 

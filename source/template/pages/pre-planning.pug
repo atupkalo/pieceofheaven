@@ -3,12 +3,12 @@ extends ../_template
 block variables
     - var title = 'Piece fo Heaven funeral home/pre-planning';
     - var jsfileName = '/assets/js/pre-planning.js';
-    - var map = '';
+    - var map = '#';
 block content
     .popup_menu__burger
         img.popup_menu__burger-icon(src="assets/img/icons/burger_w.png" alt="menu icon")
     include ../common/pop-up_menu
-    include ../common/header
+    include ../common/main_header
     .main-container
         include ../common/menu
         include ../common/preplan_content
