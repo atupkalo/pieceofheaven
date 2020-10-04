@@ -1,5 +1,8 @@
+.main_header{
+  height: 100vh;
+}
 .main_header__container{
-  min-height: 1020px;
+  height: 100vh;
 }
 .main_header__bg{
   position: absolute;
@@ -10,7 +13,7 @@
   width: 100%;
 }
 .top_line {
-  margin-bottom: 100px;
+  margin-bottom: 20vh;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
 }
@@ -65,7 +68,7 @@
   width: 100%;
 }
 .main_header__title{
-  min-height: 50vh;
+ height: 50vh;
   text-align: center;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5);

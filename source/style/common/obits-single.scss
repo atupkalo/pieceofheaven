@@ -2,6 +2,7 @@
 .obits-card{
   @include flex(row, center, center);
   background: url("/assets/img/obits_bg.png");
+
   background-repeat: repeat;
 }
 .obits-card__left{
@@ -47,10 +48,12 @@
   margin-bottom: 50px;
 }
 .obits-wishes__item{
-  @include font(18px, $text, $gray)
+  @include font(18px, $text, $gray);
   padding-bottom: 10px;
 }
-
+.obits-wishes__text{
+   border-bottom: 1px solid #cccccc;
+}
 //------------------------------------------- form
 .obits-bg{
   background-image: url('/assets/img/obits_bg.png');
@@ -63,7 +66,6 @@
   @include flex(column, flex-start, center);
   margin: 0 auto;
   width: 50%;
-  padding-bottom: 120px;
   border: 1px solid $blue;
 }
 .obits-form__title{
@@ -73,6 +75,7 @@
 }
 .sympathy__name-imput{
   border: 1px solid $gray;
+  margin: 30px 0;
 }
 .sympathy__text{
   width: 90%;
@@ -81,13 +84,18 @@
 .sympathy__submit{
   background: transparent;
   cursor: pointer;
-  padding: 10px 40px;
+  padding: 8px 64px;
   @include font(20px, $text, $blue);
   border: solid 1px $blue;
   transition: .3s;
-
+  margin: 30px 0;
   &:hover {
     background: $blue;
     color: #fff;
+  }
+}
+.sympathy__name-imput, .sympathy__text{
+  &:hover{
+    border: 1px solid $blue;
   }
 }

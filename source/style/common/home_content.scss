@@ -8,13 +8,12 @@
 }
 .home__top-title{
   text-align: left;
-  background-image: url("/assets/img/bg.png");
-  background-size: cover;
+  background: #f0f0f0;
 }
 .home__top-title-wrap{
   margin: 0 auto;
   width: 60%;
-  padding: 120px 0;
+  padding: 120px 0 60px 0;
 }
 .top-title__desc{
   @include font(28px, $text, $gray);
@@ -32,6 +31,7 @@
 .top-title__link {
   padding: 7px 25px;
   @include font(20px, $text, $blue);
+  box-shadow: 0 0 8px 2px rgba(0, 0, 0, .2);
   border: solid 1px $blue;
   transition: .3s;
 
@@ -44,7 +44,27 @@
   margin-left: 30px;
 }
 
-
+.home__top-services{
+  margin: 0 auto;
+  @include flex(row, space-between, center);
+  padding-bottom: 90px;
+  width: 60%;
+}
+.home__top-services-wrap{
+  @include flex(column, center, center);
+}
+.home__top-services-icon{
+  width: 100%;
+  margin-bottom: 30px;
+}
+.home__top-services-icon-wrap{
+  width: 80px;
+}
+.home__top-services-text{
+  @include font(22px, $text, $gray);
+  text-align: center;
+}
+//------------------------------------------------------  slider
 .obits__slider-wrap{
   width: 80%;
   margin: 0 auto;

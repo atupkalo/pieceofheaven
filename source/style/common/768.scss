@@ -1,4 +1,16 @@
 @media(max-width: 768px){
+  .main_header{
+    height: 700px;
+  }
+  .main_header__container{
+    height: 700px;
+  }
+  .main_header__title{
+    height: 320px;
+  }
+  .home__main-tile{
+    font-size: 36px;
+  }
   .top_line__content{
     padding: 5px 10px;
   }
@@ -15,14 +27,30 @@
   .main_header__title-slogan{
     font-size: 22px;
   }
-
-  .home__main-title{
-    font-size: 32px;
-    line-height: 44px;
-  }
-  .home__main-desc{
-    width: 96%;
+  .home__main-tile{
     padding: 30px 0;
+  }
+  .home__top-title-wrap{
+    text-align: center;
+    width: 96%;
+    padding: 30px 0 60px 0;
+  }
+  .home__top-services{
+    width: 100%;
+    padding-bottom: 60px;
+  }
+  .home__top-services-icon-wrap{
+    width: 40%;
+  }
+  .home__top-services-text{
+    font-size: 18px;
+  }
+  .top-title__buttons{
+    flex-direction: column;
+  }
+  .top-title__link--margin{
+    margin-left: 0;
+    margin-top: 20px;
   }
   .home__direct-links-wrap{
     flex-direction: column;
@@ -33,39 +61,22 @@
     padding: 5px 15px;
     margin: 5px 0;
   }
-    //---------------------------------------------  under  menu
-  .under_menu{
-    padding: 0;
+  .obits__home-title{
+    font-size: 36px;
   }
-  .under_menu__icon-box{
-    width: 30px;
-    height: 30px;
-  }
-  .under_menu__title{
-    margin-left: 5px;
-    font-size: 16px;
-  }
-  .under_menu__list{
-    padding: 5px 10px;
-  }
-
   //----------------------------------------------- home obits
-  .direction__arrow-wrap{
-    padding: 0;
+  .upcoming__title{
+    padding: 30px 0;
+  }
+  .upcoming__btn{
+    flex-direction: column;
+  }
+  .upcoming__link--contacts{
+    margin-left: 0;
+    margin-top: 20px;
   }
 
-  .home_obits__item-innerwrap{
-    width: 250px;
-  }
-  .obit__img-wrap{
-    height: 280px;
-  }
-  .home-obits__list-wrap{
-    margin-bottom: 100px;
-    min-height: 540px;
-  }
-
-//  -----------------------------------------------------  about
+    //  -----------------------------------------------------  about
   .about__top-desc{
     padding: 20px 15px;
   }
@@ -143,7 +154,24 @@
   .obits__item-text{
     text-align: center;
   }
-//  -------------------------------------------------------------   services
+  .obits-card{
+    flex-direction: column;
+  }
+  .obits-card__left{
+    width: 70%;
+  }
+  .obits-card__right{
+    width: 96%;
+    padding: 0;
+    margin: 0;
+  }
+  .obits-wishes{
+    width: 96%;
+  }
+  .obits-card__info{
+    margin: 0 auto;
+  }
+    //  -------------------------------------------------------------   services
   .services__tabs-item{
     font-size: 18px;
   }

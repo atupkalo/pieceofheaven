@@ -1,4 +1,7 @@
 @media(max-width: 768px){
+  .main_header__title{
+    height: 280px;
+  }
   .main_header__container{
     min-height: 580px;
   }
@@ -17,13 +20,7 @@
   .main_header__title-secdesc{
     font-size: 12px;
   }
-  .under_menu__item{
-    @include flex(column, flex-start, center);
-    font-size: 14px;
-  }
-  .under_menu__title{
-    text-align: center;
-  }
+
   .obits__title{
     padding: 25px 0 32px;
   }

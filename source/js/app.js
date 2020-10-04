@@ -42,6 +42,7 @@ doSlideMenu();
 
  window.addEventListener('scroll', function(){
      let wScrolled = window.scrollY;
+     menuFixed(wScrolled);
  });
 //---------------------------------------------------------------------------------------- header scroll
 
@@ -55,8 +56,8 @@ const mainHeaderBg = document.querySelector('.main_header__bg');
 const mainHeaderTitle = document.querySelector('.main_header__title');
 
 window.addEventListener('scroll', function(){
-    headerScroll(mainHeaderBg, -30, window.scrollY);
-    headerScroll(mainHeaderTitle, 17, window.scrollY);
+    headerScroll(mainHeaderBg, -40, window.scrollY);
+    headerScroll(mainHeaderTitle, 25, window.scrollY);
 });
 
 
