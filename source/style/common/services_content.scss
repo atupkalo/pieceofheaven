@@ -12,16 +12,21 @@
 }
 .services__main-section-text{
   @include font(20px, $text, $gray);
-  padding: 5px 15px;
+  padding: 50px 15px;
   line-height: 32px;
 }
 .services__hilight-list{
-   @include flex(row, center, center);
-  flex-wrap: wrap;
+  background: #EDEEEE;
+  padding: 60px 0;
+   @include flex(column, center, center);
  }
 .services__hilight-list-item {
   padding: 20px;
-  @include font(28px, $title, $blue);
+  @include font(28px, $text, $gray);
+}
+strong{
+  padding-left: 5px;
+  color: $blue;
 }
 //------------------------------------------------   tabs
 
