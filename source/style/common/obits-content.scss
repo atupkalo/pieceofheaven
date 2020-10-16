@@ -113,10 +113,11 @@
 }
 
 .obits__list-firstname, .obits__list-lastname{
-  padding: 3px 0;
+  padding: 5px  0 5px 5px;
   @include font(22px, $text, $gray);
 }
 .obits__list-links-wrap{
+  margin-right: 10px;
   display: flex;
   flex-direction: row-reverse;
 }

@@ -71,10 +71,12 @@
     font-size: 24px;
   }
   //----------------------------------------------------home slider
-
-  .home-page__obits-arrow-left, .home-page__obits-arrow-right{
-    top: 98%;
+  .home-obits__list-wrap{
+    width: 100%;
+    overflow: hidden;
   }
+
+
   //----------------------------------------------------obits
   .obits__title{
     margin-bottom: 0;
@@ -113,4 +115,21 @@
   .about__employee{
     margin-top: 0;
   }
+}
+
+   //------------------------------------------------------------   Pre-planning
+
+.preplan__content-wrap{
+  flex-direction: column-reverse;
+  background: url("/assets/img/preplan-s.jpg");
+  background-position: center;
+}
+.preplan__content-left{
+  width: 96%;
+  min-height: 50vh;
+  text-align: center;
+}
+.preplan__content-right{
+  width: 100%;
+  min-height: 50vh;
 }

@@ -1,134 +1,141 @@
 const sliderData = [
     {
-        img: '/assets/img/zorya.jpg',
-        name: 'Zorya',
-        lastName: 'Grishovich',
+        img: '/assets/img/slide-1.jpg',
+        name: 'SL-1',
+        lastName: 'Slide-1',
         date: '1936-2019',
         link: '/obits.html'
     },
     {
-        img: '/assets/img/stanislav.jpg',
-        name: 'Stanislav',
-        lastName: 'Zyumchenko',
+        img: '/assets/img/slide-2.jpg',
+        name: 'SL-2',
+        lastName: 'Slide-2',
         date: '1950-2019',
         link: '/obits.html'
     },
     {
-        img: '#',
-        name: 'third',
-        lastName: 'Lastname',
+        img: '/assets/img/slide-3.jpg',
+        name: 'SL-3',
+        lastName: 'Slide-3',
         date: '0000 - 0000',
         link: '#'
     },
     {
-        img: '#',
-        name: 'four',
-        lastName: 'Lastname',
+        img: '/assets/img/slide-4.jpg',
+        name: 'SL-4',
+        lastName: 'Slide-4',
         date: '0000 - 0000',
         link: '#'
     },
     {
-        img: '#',
-        name: 'five',
-        lastName: 'Lastname',
+        img: '/assets/img/slide-5.jpg',
+        name: 'SL-5',
+        lastName: 'Slide-5',
         date: '0000 - 0000',
         link: '#'
     },
     {
-        img: '#',
-        name: 'five',
-        lastName: 'Lastname',
+        img: '/assets/img/slide-6.jpg',
+        name: 'SL-6',
+        lastName: 'Slide-6',
         date: '0000 - 0000',
         link: '#'
     }
 ];
-const sliderItems = document.querySelectorAll('.home_obits__item-innerwrap');
+const sliderItems = document.querySelectorAll('.home_obits__item');
 
     //------------------------------------------------------------------------------------------ switching obits
 
     const btnL = document.querySelector('.home-page__obits-arrow-left');
     const btnR = document.querySelector('.home-page__obits-arrow-right');
     const list = document.querySelector('.home_obits__list');
-    const reqWidth = sliderItems[0].getBoundingClientRect().width + sliderItems[0].getBoundingClientRect().width/10;
 
-    const innerWidth = list.getBoundingClientRect().width,
-        outerWidth = document.querySelector('.home-obits__list-wrap').getBoundingClientRect().width;
-    diff = Math.round(innerWidth - outerWidth) +150;
+    const srcImg  = document.querySelectorAll('.obit__img'),
+          divName = document.querySelectorAll('.obit__firstname'),
+          divLast = document.querySelectorAll('.obit__lastname'),
+          divDate = document.querySelectorAll('.obit__date'),
+          slideLink = document.querySelectorAll('.obit__link');
 
-    let times = reqWidth;
-
+    let reqNum = 0;
+    let next = 1;
+    let afterNext = 2;
     //-------------left
     btnL.addEventListener('click', function(){
-        if(times >= diff){
-            return times = diff;
-        }else if(times === 0){
-            times = reqWidth;
+        reqNum++;
+        next++;
+        afterNext++;
+
+        if(reqNum > sliderData.length - 1){
+            reqNum = 0;
+        }else if(reqNum < 0 ){
+            reqNum = sliderData.length - 1;
         };
-        moveLeft(times);
-        times = times + reqWidth;
+
+        if(next >= sliderData.length){
+            next = 0;
+        }else if(next < 0){
+            next = sliderData.length - 1;
+        }
+        if(afterNext >= sliderData.length){
+            afterNext = 0;
+        }else if(afterNext < 0){
+            afterNext = sliderData.length - 1;
+        };
+        addElem(reqNum, next, afterNext);
+
     });
-    function moveLeft(sum){
-        list.style.left = - sum +'px';
-    };
 
     //------------right
     btnR.addEventListener('click', function(){
-        const currPose = parseInt(list.style.left, 10);
-        times = currPose + reqWidth;
-        if(times >= 10){
-            return times = 0
+        reqNum--;
+        next--;
+        afterNext--;
+
+        if(reqNum > sliderData.length - 1){
+            reqNum = 0;
+        }else if(reqNum < 0 ){
+            reqNum = sliderData.length - 1;
+        };
+
+        if(next >= sliderData.length){
+            next = 0;
+        }else if(next < 0){
+            next = sliderData.length - 1;
         }
-        moveRight(times);
-        times = times + reqWidth;
+        if(afterNext >= sliderData.length){
+            afterNext = 0;
+        }else if(afterNext < 0){
+            afterNext = sliderData.length - 1;
+        };
+        addElem(reqNum, next, afterNext);
+
     });
-    function moveRight(sum){
-        list.style.left = + sum + 'px';
-    };
+
 
 
 
 
 //-----------------------------------------------------------------------------------------  add elements
-for(let i=0; i < sliderData.length ; i++){
-    addElem(i);
-}
+window.addEventListener('load', function(){
+        addElem(0, 1, 2);
+});
 
-function addElem(origin){
-    const divImg  = document.createElement('div'),
-        divName = document.createElement('div'),
-        divLast = document.createElement('div'),
-        divDate = document.createElement('div'),
-        divLink = document.createElement('div');
 
-    divImg.classList.add('obit__img-wrap');
-    divName.classList.add('obit__firstname');
-    divLast.classList.add('obit__lastname');
-    divDate.classList.add('obit_date');
-    divLink.classList.add('obit_link-wrap');
 
-    const img = document.createElement('img'),
-        obitLink = document.createElement('a');
+function addElem(a, b, c){
+    let reqContent = [a, b, c];
 
-    img.classList.add('obit__img');
-    img.setAttribute('src', sliderData[origin].img);
+    for(let i=0; i < reqContent.length; i++){
+        srcImg[i].setAttribute('src', sliderData[reqContent[i]].img);
+        divName[i].innerHTML = sliderData[reqContent[i]].name;
+        divLast[i].innerHTML = sliderData[reqContent[i]].lastName;
+        divDate[i].innerHTML = sliderData[reqContent[i]].date;
+        slideLink[i].setAttribute('href', sliderData[reqContent[i].link]);
+    };
 
-    obitLink.classList.add('obit__link');
-    obitLink.innerHTML = 'view';
-    obitLink.setAttribute('href', sliderData[origin].link);
-
-    divImg.appendChild(img);
-    divName.innerHTML = sliderData[origin].name;
-    divLast.innerHTML = sliderData[origin].lastName;
-    divDate.innerHTML = sliderData[origin].date;
-    divLink.appendChild(obitLink);
-
-    sliderItems[origin].innerHTML = '';
-    sliderItems[origin].appendChild(divImg);
-    sliderItems[origin].appendChild(divName);
-    sliderItems[origin].appendChild(divLast);
-    sliderItems[origin].appendChild(divDate);
-    sliderItems[origin].appendChild(divLink);
 };
+
+
 
 //-----------------------------------------------------------------------  Arrow down
 
