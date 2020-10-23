@@ -115,21 +115,24 @@
   .about__employee{
     margin-top: 0;
   }
+  //------------------------------------------------------------   Pre-planning
+
+  .preplan__content-wrap{
+    @include flex(column, center, center);
+    flex-direction: column-reverse;
+    background: url("/assets/img/preplan-s.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .preplan__content-left-subtile{
+    text-align: center;
+  }
+  .preplan__content-left{
+    width: 100%;
+  }
+  .preplan__content-text{
+    padding: 0 10px 30px 10px;
+  }
 }
 
-   //------------------------------------------------------------   Pre-planning
 
-.preplan__content-wrap{
-  flex-direction: column-reverse;
-  background: url("/assets/img/preplan-s.jpg");
-  background-position: center;
-}
-.preplan__content-left{
-  width: 96%;
-  min-height: 50vh;
-  text-align: center;
-}
-.preplan__content-right{
-  width: 100%;
-  min-height: 50vh;
-}

@@ -46,20 +46,4 @@
   }
 
 }
-@media (min-width: 2100px) {
-  .direction__arrow-wrap{
-    opacity: 0;
-  }
-  .home-page__obits-arrow-left, .home-page__obits-arrow-right{
-    display: none;
-  }
-  .obits__list-bg, .obits__list-bg-left{
-    display: none;
-  }
-  .home-obits__list-wrap {
-    transform: translateX(4%);
-  }
-  .under_menu{
-    padding: 0 500px;
-  }
-}
+
