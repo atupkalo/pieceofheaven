@@ -25,6 +25,10 @@
     width: 35px;
     height: 35px;
   }
+  .top_line__fb-icon{
+    width: 35px;
+    height: 35px;
+  }
   .top_line__lang{
     font-size: 18px;
   }
@@ -263,15 +267,12 @@
 
  // ------------------------------------------------  contacts
   .contacts__title{
-    font-size: 36px;
+    padding: 60px 0;
   }
-  .contact__list{
-    width: 99%;
-    box-shadow: none;
-  }
-  .contact__list-item{
+  .contact__list-item--padding{
     font-size: 18px;
   }
+
   .map__over-line{
     padding: 7px 0;
     font-size: 16px;

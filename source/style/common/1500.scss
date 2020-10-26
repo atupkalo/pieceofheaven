@@ -34,15 +34,15 @@
   .footer__btm-wrap{
     width: 70%;
   }
-  .contact__list{
-    width: 65%;
-  }
 
 }
 
 @media(min-width: 1501px) {
   .main_header__container{
     min-height: 1200px;
+  }
+  .main_header__title{
+    height: 55vh;
   }
 
 }

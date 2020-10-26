@@ -41,6 +41,17 @@ const doFeedback = function(){
 };
 doFeedback();
 
+//----------------------------------------------------------------------------------------------  title
+const pageTitle = document.querySelector('.feedbacks__content-title');
+window.addEventListener('scroll', function(){
+    const windowS = window.scrollY;
+
+    if(windowS >= 100){
+        pageTitle.style.opacity = '1';
+    };
+
+});
+
 
 
 

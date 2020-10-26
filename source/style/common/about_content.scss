@@ -5,6 +5,7 @@
 }
 
 .about__title{
+  background: #ffffff;
   padding: 60px 0;
   @include font(48px, $title, $gray);
   margin-bottom: 30px;

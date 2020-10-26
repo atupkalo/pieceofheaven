@@ -1,6 +1,7 @@
 .feedbacks__content-title{
+  background: #ffffff;
   @include font(48px, $title, $gray);
-  padding: 40px 0;
+  padding: 90px 0;
   text-align: center;
   opacity: 0;
   transition: 1.5s;
