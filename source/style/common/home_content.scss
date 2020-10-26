@@ -27,9 +27,11 @@
 }
 .top-title__buttons{
   @include flex(row, flex-start, center);
+  text-align: center;
 }
 .top-title__link {
-  padding: 7px 25px;
+  padding: 7px 0;
+  width: 200px;
   @include font(20px, $text, $blue);
   box-shadow: 0 0 8px 2px rgba(0, 0, 0, .2);
   border: solid 1px $blue;

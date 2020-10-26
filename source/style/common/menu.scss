@@ -41,8 +41,8 @@
 }
 .menu__link{
   display: block;
-  padding: 8px 0 6px 0;
-  @include font(18px, $text, #fff);
+  padding: 9px 0 5px 0;
+  @include font(16px, $text, #fff);
   transition-duration: .3s;
   &:hover{
     color: $gray;

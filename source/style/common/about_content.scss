@@ -1,9 +1,11 @@
 .about__top-desc{
   text-align: center;
   padding-top: 30px;
+  padding-bottom: 90px;
 }
 
 .about__title{
+  padding: 60px 0;
   @include font(48px, $title, $gray);
   margin-bottom: 30px;
   opacity: 0;
