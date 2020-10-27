@@ -1,0 +1,25 @@
+.main_header__container-common{
+  height: 70vh;
+}
+.main_header__title-common {
+  background: transparent;
+  margin-top: -5%;
+}
+.main_header__title-picwrap-common{
+  width: 60%;
+  margin: 0 auto;
+}
+.top_line__common{
+  background: transparent;
+}
+.main_header__bg-common{
+  &:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(#000000, .4);
+  }
+}

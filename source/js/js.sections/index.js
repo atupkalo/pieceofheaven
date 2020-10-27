@@ -135,7 +135,28 @@ function addElem(a, b, c){
 
 };
 
+//-----------------------------------------------------------------------  Arrow down
 
+const arrowDown = document.querySelector('.header__arrow-down');
+let changer = 0;
+
+function opacityChange(i){
+    if(i === 0){
+        arrowDown.style.opacity = 0;
+    }else if(i === 1){
+        arrowDown.style.opacity = 1;
+    };
+};
+
+
+setInterval(function(){
+    changer++;
+
+    if(changer > 1){
+        changer = 0;
+    }
+    opacityChange(changer);
+}, 500);
 
 
 
