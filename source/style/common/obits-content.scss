@@ -4,6 +4,7 @@
   border-top: 1px solid #cccccc;
   width: 96%;
   margin: 0 auto;
+  padding-bottom: 90px;
 }
 //----------------------------------------------------------------  Up coming
 .obits__upcoming{
@@ -46,7 +47,9 @@
   @include flex(row, center, center);
 }
 .upcoming__link--flowers, .upcoming__link--contacts{
-  padding: 7px 25px;
+  text-align: center;
+  width: 180px;
+  padding: 7px 0;
   @include font(20px, $text, $blue);
   box-shadow: 0 0 8px 2px rgba(0, 0, 0, .2);
   border: solid 1px $blue;

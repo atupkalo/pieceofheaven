@@ -12,10 +12,10 @@ block content
     .main-container
         include ../common/menu
         .obits__upcoming
-            .upcoming__title Up coming services
+            .upcoming__title Upcoming services
             ul.upcoming__list
                 -
-                    var upcoming = ['Name', 'When', 'Time', 'Cemetery', 'Viewing', 'Viewing time'];
+                    var upcoming = ['Name', 'When', 'Time', 'Cemetery', 'Viewing place', 'Viewing time'];
                 each item in upcoming
                     li.upcoming__list-item
                         .upcoming__list-item-name #{item}

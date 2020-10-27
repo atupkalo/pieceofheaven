@@ -8,29 +8,16 @@ section.obits__content
     .obits__container
         ul.obits__list
             -
-                var obitslistData = [
-                    ['/assets/img/zorya.jpg', 'First', 'last', '/obits-single.html'],
-                    ['/assets/img/zorya.jpg', 'first', 'last', '/obits-single.html'],
-                    ['/assets/img/zorya.jpg', 'first', 'last', '/obits-single.html'],
-                    ['/assets/img/zorya.jpg', 'first', 'last', '/obits-single.html'],
-                    ['/assets/img/zorya.jpg', 'first', 'last', '/obits-single.html'],
-                    ['/assets/img/zorya.jpg', 'first', 'last', '/obits-single.html'],
-                    ['/assets/img/zorya.jpg', 'first', 'last', '/obits-single.html'],
-                    ['/assets/img/zorya.jpg', 'first', 'last', '/obits-single.html'],
-                    ['/assets/img/zorya.jpg', 'first', 'last', '/obits-single.html'],
-                    ['/assets/img/zorya.jpg', 'first', 'last', '/obits-single.html'],
-                    ['/assets/img/zorya.jpg', 'first', 'last', '/obits-single.html'],
-                    ['/assets/img/zorya.jpg', 'first', 'last', '/obits-single.html'],
-                ];
+                var obitslistData = [1,2,3,4,5,6,7,8,9,10,11,12];
 
             each item in obitslistData
                 li.obits__list-item
                     .obits__list-img-wrap
-                        img(src=`${item[0]}`).obits__list-img
-                    .obits__list-firstname #{item[1]}
-                    .obits__list-lastname #{item[2]}
+                        img(src="#").obits__list-img
+                    .obits__list-firstname
+                    .obits__list-lastname
                     .obits__list-links-wrap
-                        a(href=`${item[3]}`).obits__list-link view
+                        a(href="#").obits__list-link view
 
 
 
