@@ -1,3 +1,23 @@
+//--------------------------------------------------------------- upcoming events
+const upcomingData = {
+    name: 'Name',
+    date: '00/00/0000',
+    vPlace: 'Piece of heaven',
+    vTime: '12:00pm',
+    cemetery: 'Emanuel',
+    cemeteryTime: '2:00pm'
+};
+
+const upcomingValues = Object.values(upcomingData);
+const upcomingEventsList = document.querySelectorAll('.upcoming__list-item-input');
+
+for(let i = 0; i < upcomingEventsList.length; i++){
+
+    upcomingEventsList[i].innerHTML = upcomingValues[i];
+}
+
+
+//---------------------------------------------------------------  obits list
 const obitsPageData = [
     {
         picLink: '/assets/img/obits-test.jpg',
@@ -95,17 +115,7 @@ function setElements(a){
 };
 
 
-
-
-
-
-
-
-
-
-
-
-
+//---------------------------------------------------------------------- menu fixed
 
 const pageTitle = document.querySelector('.obits__title');
 window.addEventListener('scroll', function(){

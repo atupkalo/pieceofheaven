@@ -15,14 +15,14 @@ block content
             .upcoming__title Upcoming services
             ul.upcoming__list
                 -
-                    var upcoming = ['Name', 'When', 'Time', 'Cemetery', 'Viewing place', 'Viewing time'];
+                    var upcoming = ['Name:', 'Date:', 'Viewing at:', 'Viewing time:', 'Grave side service time:', 'Grave side service at:'];
                 each item in upcoming
                     li.upcoming__list-item
                         .upcoming__list-item-name #{item}
                         .upcoming__list-item-input  test-test
             .upcoming__btn
                 a(href="https://lucysflower.com").upcoming__link--flowers order flowers
-                a(href="/contacts.html").upcoming__link--contacts  contacts
+                a(href="/contacts.html").upcoming__link--contacts  contact us
         include ../common/obits_content
     include ../common/footer
 
